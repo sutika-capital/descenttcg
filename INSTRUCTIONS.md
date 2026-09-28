@@ -14,12 +14,20 @@
 | Transactional email | Resend | Contact and offer-form delivery | `descenttcg.com` is verified and sending-enabled in Resend. |
 | External commerce/inventory | TCGplayer Pro and Collectr embed | Storefront links and the Fort Knox Vault iframe | These are external destinations/embeds, not data stores managed by this repo. |
 | Database/auth | None in this codebase | Not applicable | No source reference to Supabase was found. Do not attach an unrelated Supabase project to the site without an approved feature plan. |
+| Design reference | [`sutika-capital/descent-into-gaming`](https://github.com/sutika-capital/descent-into-gaming) | Optional DIG redesign concepts and approved reusable visual assets | A separate private Next.js demo, not a production branch. Follow its migration guide before porting selected work. |
 
 ### Production domains
 
 - Primary: `https://descenttcg.com`
 - `www.descenttcg.com` resolves through Vercel.
 - Legacy `rippingzacks.com` routing and mail records are intentionally outside normal content work. Do **not** change its M365/mail records.
+
+### Related DIG design demo
+
+- The private [`sutika-capital/descent-into-gaming`](https://github.com/sutika-capital/descent-into-gaming) repository is an independent design concept for Descent Into Gaming. Its public demo is [descent-into-gaming.vercel.app](https://descent-into-gaming.vercel.app/).
+- It uses a different Next.js/React/Tailwind stack. Do **not** merge the repositories or replace this static production stack wholesale.
+- Port only selected, approved concepts into a focused branch of this production repository. Preserve production vault data, forms, URLs, SEO, schema, and Vercel configuration unless the approved scope explicitly changes them.
+- Read the DIG repository's `INSTRUCTIONS.md` before selecting or copying design, content, or assets from it.
 
 ## 2. How the site works
 
