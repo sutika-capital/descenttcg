@@ -1,27 +1,27 @@
 /* ============================================================
    LORCANA VAULT — unified with the sitewide palette:
-   electric yellow / ember accents on jet black, charcoal
-   panels, museum-plaque display cases. Token names are the
-   legacy --vault-* set; only values were remapped.
+   DIG violet / lavender accents on deep-purple surfaces,
+   museum-plaque display cases. Token names are the legacy
+   --vault-* set; only values were remapped.
    ============================================================ */
 
 .vault-body{
-  --vault-ink:      #0A0A0A;
-  --vault-panel:    #1A1A1A;
-  --vault-panel-2:  #242424;
-  --vault-gold:     #E6B800;
-  --vault-gold-br:  #FFD100;
-  --vault-glimmer:  #FF4D2E;
-  --vault-parch:    #F5F5F0;
-  --vault-faint:    rgba(245,245,240,0.52);
-  --vault-line:     rgba(255,255,255,0.14);
+  --vault-ink:      #0B0A12;
+  --vault-panel:    #16161D;
+  --vault-panel-2:  #1B1A26;
+  --vault-gold:     #7C3AED;
+  --vault-gold-br:  #A78BFA;
+  --vault-glimmer:  #C4B5FD;
+  --vault-parch:    #ECEAF4;
+  --vault-faint:    rgba(236,234,244,0.52);
+  --vault-line:     rgba(196,181,253,0.20);
   --vault-display:  'Cinzel', serif;
   background:var(--vault-ink);
 }
 
 .vault-hero{
   background:
-    radial-gradient(ellipse at 50% -10%, rgba(255,77,46,0.20), transparent 60%),
+    radial-gradient(ellipse at 50% -10%, rgba(124,58,237,0.20), transparent 60%),
     var(--vault-ink);
   padding:90px 0 60px;
   border-bottom:1px solid var(--vault-line);
@@ -244,7 +244,7 @@
    gradient panel, corner brackets, gradient title text, a stats
    readout, and an underline rule. Built entirely from each
    page's own --vault-* theme tokens, so every vault renders in
-   the shared yellow/ember-on-black palette with zero
+   the shared violet/lavender-on-deep-purple palette with zero
    page-specific color rules needed here.
    ============================================================ */
 .vault-series-banner{
@@ -366,7 +366,7 @@
   background:radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--vault-glimmer) 13%, transparent), transparent 65%);
 }
 
-/* Iconic cards get a permanent yellow-foil frame (every other card on the
+/* Iconic cards get a permanent lavender-foil frame (every other card on the
    site only gets a border on hover) plus a small ribbon tag, since these
    are literally the rarest tier that exists — worth a "vitrine" look
    year-round, not just a hover state. */

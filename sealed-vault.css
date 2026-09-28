@@ -1,27 +1,27 @@
 /* ============================================================
    SEALED VAULT — unified with the sitewide palette:
-   electric yellow / ember accents on jet black, charcoal
-   panels. Token names are the legacy --vault-* set; only
-   values were remapped.
+   DIG violet / lavender accents on deep-purple surfaces.
+   Token names are the legacy --vault-* set; only values
+   were remapped.
    ============================================================ */
 
 .sealed-vault-body{
-  --vault-ink:      #0A0A0A;
-  --vault-panel:    #1A1A1A;
-  --vault-panel-2:  #242424;
-  --vault-gold:     #E6B800;
-  --vault-gold-br:  #FFD100;
-  --vault-glimmer:  #FF4D2E;
-  --vault-parch:    #F5F5F0;
-  --vault-faint:    rgba(245,245,240,0.52);
-  --vault-line:     rgba(255,255,255,0.14);
+  --vault-ink:      #0B0A12;
+  --vault-panel:    #16161D;
+  --vault-panel-2:  #1B1A26;
+  --vault-gold:     #7C3AED;
+  --vault-gold-br:  #A78BFA;
+  --vault-glimmer:  #C4B5FD;
+  --vault-parch:    #ECEAF4;
+  --vault-faint:    rgba(236,234,244,0.52);
+  --vault-line:     rgba(196,181,253,0.20);
   --vault-display:  'Cinzel', serif;
   background:var(--vault-ink);
 }
 
 .sealed-vault-body .vault-hero{
   background:
-    radial-gradient(ellipse at 50% -10%, rgba(255,77,46,0.18), transparent 60%),
+    radial-gradient(ellipse at 50% -10%, rgba(124,58,237,0.18), transparent 60%),
     var(--vault-ink);
 }
 
@@ -75,25 +75,24 @@
 }
 
 /* ------------------------------------------------------------
-   TMNT SPOTLIGHT — a self-contained color override just for the
+   TMNT SPOTLIGHT — a self-contained violet depth override for the
    Magic: TMNT section, so it reads as a distinct "guest feature"
-   (TMNT-brand green) rather than blending into the sitewide
-   yellow/black Sealed Vault theme. Scoped
+   while remaining inside the shared DIG color system. Scoped
    entirely through --vault-* custom properties, so every shared
    component (banner, plaques, corners, rule) picks it up for
    free with no duplicated rules.
    ------------------------------------------------------------ */
 .tmnt-highlight{
-  --vault-panel:    #12321d;
-  --vault-panel-2:  #194227;
-  --vault-gold:     #4caf50;
-  --vault-gold-br:  #8bdb5e;
-  --vault-glimmer:  #c6ff6b;
-  --vault-line:     rgba(139,219,94,0.34);
+  --vault-panel:    #171326;
+  --vault-panel-2:  #221A36;
+  --vault-gold:     #8B5CF6;
+  --vault-gold-br:  #C4B5FD;
+  --vault-glimmer:  #DDD6FE;
+  --vault-line:     rgba(196,181,253,0.34);
   padding-bottom:20px;
 }
 .tmnt-highlight-banner{
-  box-shadow:0 18px 36px -26px rgba(0,0,0,0.65), inset 0 1px 0 rgba(198,255,107,0.12), 0 0 0 1px rgba(139,219,94,0.16);
+  box-shadow:0 18px 36px -26px rgba(0,0,0,0.65), inset 0 1px 0 rgba(221,214,254,0.12), 0 0 0 1px rgba(196,181,253,0.16);
 }
 .tmnt-badge{
   display:inline-block;
@@ -102,7 +101,7 @@
   font-weight:700;
   letter-spacing:0.08em;
   text-transform:uppercase;
-  color:#12321d;
+  color:#0B0A12;
   background:linear-gradient(90deg, var(--vault-glimmer), var(--vault-gold-br));
   padding:4px 10px;
   border-radius:999px;
@@ -118,21 +117,21 @@
 }
 
 /* ------------------------------------------------------------
-   JP SPECIALS SPOTLIGHT — red/white, evoking the Japanese flag,
-   distinct from the TMNT section's green. Same self-contained
-   color-override pattern.
+   JP SPECIALS SPOTLIGHT — a plum/lavender variation distinct from
+   the TMNT section while remaining inside the DIG palette. Same
+   self-contained color-override pattern.
    ------------------------------------------------------------ */
 .jp-specials-highlight{
-  --vault-panel:    #2a1214;
-  --vault-panel-2:  #38181b;
-  --vault-gold:     #d94452;
-  --vault-gold-br:  #ff5a68;
-  --vault-glimmer:  #ffb3b9;
-  --vault-line:     rgba(255,90,104,0.34);
+  --vault-panel:    #21152F;
+  --vault-panel-2:  #2D1C3F;
+  --vault-gold:     #7C3AED;
+  --vault-gold-br:  #A78BFA;
+  --vault-glimmer:  #E9D5FF;
+  --vault-line:     rgba(167,139,250,0.34);
   padding-bottom:20px;
 }
 .jp-specials-highlight-banner{
-  box-shadow:0 18px 36px -26px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,179,185,0.12), 0 0 0 1px rgba(255,90,104,0.16);
+  box-shadow:0 18px 36px -26px rgba(0,0,0,0.65), inset 0 1px 0 rgba(233,213,255,0.12), 0 0 0 1px rgba(167,139,250,0.16);
 }
 .jp-specials-badge{
   display:inline-block;
@@ -141,7 +140,7 @@
   font-weight:700;
   letter-spacing:0.08em;
   text-transform:uppercase;
-  color:#2a1214;
+  color:#0B0A12;
   background:linear-gradient(90deg, var(--vault-glimmer), var(--vault-gold-br));
   padding:4px 10px;
   border-radius:999px;

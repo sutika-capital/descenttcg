@@ -1,27 +1,27 @@
 /* ============================================================
    SLAB VAULT — unified with the sitewide palette:
-   electric yellow / ember accents on jet black, charcoal
-   panels. Token names are the legacy --vault-* set; only
-   values were remapped.
+   DIG violet / lavender accents on deep-purple surfaces.
+   Token names are the legacy --vault-* set; only values
+   were remapped.
    ============================================================ */
 
 .slab-vault-body{
-  --vault-ink:      #0A0A0A;
-  --vault-panel:    #1A1A1A;
-  --vault-panel-2:  #242424;
-  --vault-gold:     #E6B800;
-  --vault-gold-br:  #FFD100;
-  --vault-glimmer:  #FF4D2E;
-  --vault-parch:    #F5F5F0;
-  --vault-faint:    rgba(245,245,240,0.55);
-  --vault-line:     rgba(255,255,255,0.14);
+  --vault-ink:      #0B0A12;
+  --vault-panel:    #16161D;
+  --vault-panel-2:  #1B1A26;
+  --vault-gold:     #7C3AED;
+  --vault-gold-br:  #A78BFA;
+  --vault-glimmer:  #C4B5FD;
+  --vault-parch:    #ECEAF4;
+  --vault-faint:    rgba(236,234,244,0.55);
+  --vault-line:     rgba(196,181,253,0.20);
   --vault-display:  'Cinzel', serif;
   background:var(--vault-ink);
 }
 
 .slab-vault-body .vault-hero{
   background:
-    radial-gradient(ellipse at 50% -10%, rgba(255,77,46,0.20), transparent 60%),
+    radial-gradient(ellipse at 50% -10%, rgba(124,58,237,0.20), transparent 60%),
     var(--vault-ink);
 }
 
@@ -73,10 +73,10 @@
   padding:22px 28px;
   border-radius:16px;
   background:
-    radial-gradient(ellipse at 15% 0%, rgba(255,77,46,0.16), transparent 55%),
+    radial-gradient(ellipse at 15% 0%, rgba(124,58,237,0.16), transparent 55%),
     linear-gradient(135deg, var(--vault-panel-2), var(--vault-panel));
   border:1px solid var(--vault-line);
-  box-shadow:0 18px 36px -26px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,77,46,0.08);
+  box-shadow:0 18px 36px -26px rgba(0,0,0,0.65), inset 0 1px 0 rgba(124,58,237,0.08);
 }
 .vault-grid + .slab-series-banner{
   margin-top:56px;
