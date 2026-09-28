@@ -9,7 +9,7 @@
 | Area | Verified system | What it controls | Maintainer notes |
 |---|---|---|---|
 | Source code | [`sutika-capital/descenttcg`](https://github.com/sutika-capital/descenttcg) | Site pages, vault inventory data, assets, forms, SEO files, build configuration | The repo is public. `main` is the production branch. |
-| Website hosting | Vercel | Serves `descenttcg.com`, builds the static `dist/` output, runs `/api/contact` and `/api/offer` serverless functions | The production site is definitely served by Vercel. Project ownership/access needs reconciliation; see §3. |
+| Website hosting | Vercel team **Sutika Capital LLC** (`sutika-capital`), project `descenttcg` | Serves `descenttcg.com`, builds the static `dist/` output, runs `/api/contact` and `/api/offer` serverless functions | Ownership is verified from the Vercel GitHub deployment status and Vercel domain metadata. Project-scoped access still needs to be granted to maintainers; see §3. |
 | DNS | Cloudflare account **Sutika Capital LLC** | `descenttcg.com` DNS | Zone is active. Apex points to Vercel and `www` aliases Vercel. Keep mail records intact. |
 | Transactional email | Resend | Contact and offer-form delivery | `descenttcg.com` is verified and sending-enabled in Resend. |
 | External commerce/inventory | TCGplayer Pro and Collectr embed | Storefront links and the Fort Knox Vault iframe | These are external destinations/embeds, not data stores managed by this repo. |
@@ -70,11 +70,11 @@ This review identified two access gaps. Resolve these before treating the handof
 
 ### Vercel
 
-- Existing project notes identify the intended location as Vercel team `sutika-capital`, project `descenttcg`.
-- The production domain returns Vercel headers and its checked pages match this repository's current build byte-for-byte.
-- However, the currently connected Sutika Capital Vercel team exposes only `lainey-website`; it does **not** expose a `descenttcg` project, repository link, or `descenttcg.com` alias. This means the Vercel project is either in another Vercel account/team or its access/integration is stale.
-- A Sutika Capital Vercel owner must locate the production project, move it to or share it with the `sutika-capital` team, connect the GitHub repository, and grant maintainers appropriate project access. Confirm that the three mail variables above exist in both Production and Preview scopes.
-- After access is restored, record the actual Vercel project URL and owner in the team password manager or internal access register — never in this repository.
+- The production project is confirmed as [`sutika-capital/descenttcg`](https://vercel.com/sutika-capital/descenttcg). GitHub deployment statuses identify the `sutika-capital` Vercel team, and the corresponding successful deployment URLs use the `-sutika-capital.vercel.app` suffix.
+- The `descenttcg.com` and legacy `rippingzacks.com` domains are registered in that same Vercel team.
+- The currently connected Vercel identity can see the Sutika Capital team and its domains, but Vercel returns `Project not found` for `descenttcg` and exposes only `lainey-website` in its project list. This is a **project-scoped access restriction or stale connector scope**, not evidence that the project belongs to another team.
+- A Vercel team owner must grant each active maintainer access to the `descenttcg` project (or relax the project's access policy for the appropriate team role), then have those maintainers reconnect Vercel. Confirm that the three mail variables above exist in both Production and Preview scopes.
+- Record the exact project URL, owner contacts, recovery method, and role assignments in the team's private access register — never in this repository.
 
 ### Cloudflare and Resend
 
@@ -95,13 +95,13 @@ This review identified two access gaps. Resolve these before treating the handof
 
 4. Check the affected page(s) locally or on a Vercel Preview deployment. For vault edits, verify visible cards, prices, images, offer buttons, and generated JSON-LD.
 5. Open a pull request with: purpose, changed files, screenshots/URLs for visual changes, build result, and rollback note.
-6. Merge only after review. A merge to `main` is expected to trigger the Vercel production deployment once the Vercel integration is recovered.
+6. Merge only after review. A merge to `main` triggers a Vercel production deployment.
 7. Validate production after deployment: home page, every changed vault/page, clean URLs, redirects, mobile layout, and form validation.
 
 ### Rollback
 
 - **Code/content:** revert the merged commit and redeploy.
-- **Deployment:** promote the prior healthy Vercel deployment after Vercel access is restored.
+- **Deployment:** promote the prior healthy Vercel deployment once a maintainer has project-scoped Vercel access.
 - **DNS:** do not use DNS changes as a normal rollback mechanism. Reverse only the exact, reviewed DNS change if one was made.
 
 ## 5. Change boundaries
@@ -136,12 +136,13 @@ Reviewed on **2026-09-28**:
 - The locally generated home, Lorcana Vault, Slab Vault, and Sealed Vault pages matched the live production responses byte-for-byte.
 - Production form endpoints returned the expected `400` validation responses for empty test payloads. No email was sent during this check.
 - The active site was served by Vercel, and the source repository matched production.
+- Vercel deployed commit `76e0953` successfully from the verified Sutika Capital team project on 2026-09-28.
 
 ## 8. Completion checklist for the Sutika Capital handoff
 
 - [ ] Grant the chosen Sutika Capital GitHub team access to `sutika-capital/descenttcg`.
 - [ ] Enable branch protection and adopt pull-request review for `main`.
-- [ ] Recover or transfer the production Vercel project into the Sutika Capital team, with the GitHub integration and both domain aliases confirmed.
+- [ ] Grant project-scoped Vercel access to each Sutika Capital maintainer for `sutika-capital/descenttcg`, with the GitHub integration and both domain aliases confirmed.
 - [ ] Verify Vercel Production and Preview form environment variables without revealing values in tickets, chat, or source control.
 - [ ] Grant least-privilege Cloudflare and Resend access to the appropriate operators.
 - [ ] Store actual account ownership, recovery methods, and credential rotation contacts in the team’s private access register.

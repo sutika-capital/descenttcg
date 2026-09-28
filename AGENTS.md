@@ -10,7 +10,7 @@ Read [`INSTRUCTIONS.md`](INSTRUCTIONS.md) before making a change. It is the sour
 - Preserve clean URLs, redirects, canonical URLs, Open Graph metadata, schema, sitemap, and `llms.txt` whenever changing public pages or routes.
 - Update inventory data only with inventory-owner approval. Keep card images as optimized files under `assets/photos/`, not base64 data in JavaScript.
 - Do not change Cloudflare mail records, Resend configuration, Vercel domains/environment variables, or legacy Ripping Zacks routing without the appropriate owner review.
-- Work in a focused branch and use a pull request. Direct changes to `main` are production-impacting once the Vercel project integration is restored.
+- Work in a focused branch and use a pull request. Direct changes to `main` trigger a production deployment from Vercel project `sutika-capital/descenttcg`.
 
 ## Key locations
 
