@@ -40,6 +40,7 @@ const EXCLUDE_FROM_COPY = new Set([
   'package-lock.json',
   '.DS_Store',
   'AGENTS.md',
+  'INSTRUCTIONS.md',
   // Build-time data export (truncated Collectr dump); no page loads it,
   // so it doesn't belong in dist/.
   'fortknox.js',
