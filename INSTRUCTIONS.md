@@ -28,6 +28,7 @@
 - It uses a different Next.js/React/Tailwind stack. Do **not** merge the repositories or replace this static production stack wholesale.
 - Port only selected, approved concepts into a focused branch of this production repository. Preserve production vault data, forms, URLs, SEO, schema, and Vercel configuration unless the approved scope explicitly changes them.
 - Read the DIG repository's `INSTRUCTIONS.md` before selecting or copying design, content, or assets from it.
+- The staged palette, clean dragon mark, and future favicon candidates are in `assets/brand/dig-purple-dragon/`. They are intentionally unreferenced until a reviewed visual-reskin change adopts them. The larger DIG character illustrations remain source-review-only because their supplied source files show horizontal rendering artifacts.
 
 ## 2. How the site works
 

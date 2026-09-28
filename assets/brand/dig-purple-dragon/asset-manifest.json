@@ -1,0 +1,127 @@
+{
+  "purpose": "Staged DIG purple-dragon identity kit for future, reviewable Descent TCG visual reskin work. No file in this directory is referenced by the current pages.",
+  "source_repository": "https://github.com/sutika-capital/descent-into-gaming",
+  "source_commit": "9b5cea3777ea9e50ea6b00d68ecc0cb2440667a1",
+  "web_ready_assets": [
+    {
+      "filename": "apple-touch-icon-180x180.png",
+      "dimensions": {
+        "width": 180,
+        "height": 180
+      },
+      "format": "PNG",
+      "sha256": "b9e6f3f1c5e3fe2b0ee21ebbe756c067e2faa26d4a74710fee60713e41b6e325",
+      "status": "staged-not-referenced"
+    },
+    {
+      "filename": "dragon-mark.png",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "format": "PNG",
+      "sha256": "3352861a67ce9695560d245425b48596c3355b14b0cec7b6fd520b60a941570a",
+      "status": "staged-not-referenced"
+    },
+    {
+      "filename": "favicon-16x16.png",
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      },
+      "format": "PNG",
+      "sha256": "4803b978a8e344cd7c708a3b2e4b3b68312b09258e136514b03b45a294f2bfaf",
+      "status": "staged-not-referenced"
+    },
+    {
+      "filename": "favicon-32x32.png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
+      },
+      "format": "PNG",
+      "sha256": "42cfa784b1bdbf115cee2c6e7cc6576c595f3d8c281da357ac5c2130d5c3a063",
+      "status": "staged-not-referenced"
+    },
+    {
+      "filename": "favicon.ico",
+      "dimensions": {
+        "width": 48,
+        "height": 48
+      },
+      "format": "ICO",
+      "sha256": "accb9273ae8c791cb6a97892c8be8dc0cba27483c5da0873d25a92ae6398afb7",
+      "status": "staged-not-referenced"
+    },
+    {
+      "filename": "icon-180.png",
+      "dimensions": {
+        "width": 180,
+        "height": 180
+      },
+      "format": "PNG",
+      "sha256": "b8bed6c805d4eb098ab54197554be060f521439359ebc284acdd4eaddc5ba992",
+      "status": "staged-not-referenced"
+    }
+  ],
+  "source_artwork_pending_review": [
+    {
+      "filename": "dragon-standing.png",
+      "source_path": "public/brand/dragon-standing.png",
+      "role": "hero or feature illustration",
+      "dimensions": {
+        "width": 1400,
+        "height": 1281
+      },
+      "format": "PNG with alpha",
+      "sha256": "3393ab268a32f2793cfaa19f304776610f6f058fca1b9e195dfb52e5f6364e48",
+      "status": "source-review-required",
+      "note": "Source artwork is retained in the private DIG repository. Visual review found horizontal rendering artifacts in the supplied source; do not publish on Descent TCG until a corrected or separately approved version is available."
+    },
+    {
+      "filename": "dragon-leaping.png",
+      "source_path": "public/brand/dragon-leaping.png",
+      "role": "event or announcement illustration",
+      "dimensions": {
+        "width": 1400,
+        "height": 1370
+      },
+      "format": "PNG with alpha",
+      "sha256": "5b466e80b885a00560496c9bfcfb1946b876e0713663044948ebafc64701fb20",
+      "status": "source-review-required",
+      "note": "Source artwork is retained in the private DIG repository. Visual review found horizontal rendering artifacts in the supplied source; do not publish on Descent TCG until a corrected or separately approved version is available."
+    },
+    {
+      "filename": "dragon-curled.png",
+      "source_path": "public/brand/dragon-curled.png",
+      "role": "collection or vault illustration",
+      "dimensions": {
+        "width": 1334,
+        "height": 1400
+      },
+      "format": "PNG with alpha",
+      "sha256": "931720f8279c4c7967de2c6ce0977e11e12bdb1ad66062995369405ea2072d01",
+      "status": "source-review-required",
+      "note": "Source artwork is retained in the private DIG repository. Visual review found horizontal rendering artifacts in the supplied source; do not publish on Descent TCG until a corrected or separately approved version is available."
+    },
+    {
+      "filename": "dragon-wink.png",
+      "source_path": "public/brand/dragon-wink.png",
+      "role": "community or call-to-action illustration",
+      "dimensions": {
+        "width": 1400,
+        "height": 1239
+      },
+      "format": "PNG with alpha",
+      "sha256": "55faf91c7099658a651a332cf426dc3aec6b52b904abd6e38dcf2dcc1c8019e7",
+      "status": "source-review-required",
+      "note": "Source artwork is retained in the private DIG repository. Visual review found horizontal rendering artifacts in the supplied source; do not publish on Descent TCG until a corrected or separately approved version is available."
+    }
+  ],
+  "implementation_notes": [
+    "Retain the Descent TCG name and current information architecture.",
+    "Use dragon-mark.png as an icon/brand mark alongside a Descent TCG wordmark; it is not a replacement text logo.",
+    "The favicon candidates are staged only. Existing favicon references are intentionally unchanged.",
+    "Adopt palette tokens through an explicit reviewed stylesheet update rather than importing palette.css directly."
+  ]
+}

@@ -1,0 +1,13 @@
+/* DIG palette staging file — deliberately not imported by the current site.
+   Adopt via a reviewed stylesheet change; do not link this file directly from a page. */
+:root {
+  --dig-bg: #0B0A12;
+  --dig-surface: #16161D;
+  --dig-card: #1B1A26;
+  --dig-line: #2A2838;
+  --dig-violet: #7C3AED;
+  --dig-lavender: #A78BFA;
+  --dig-pale: #C4B5FD;
+  --dig-text: #ECEAF4;
+  --dig-muted: #9A96B0;
+}

@@ -1,0 +1,63 @@
+{
+  "source": {
+    "repository": "https://github.com/sutika-capital/descent-into-gaming",
+    "tokens_file": "app/globals.css",
+    "extracted_on": "2026-09-28"
+  },
+  "colors": {
+    "background": {
+      "value": "#0B0A12",
+      "source_token": "--color-dig-bg",
+      "use": "Page background"
+    },
+    "surface": {
+      "value": "#16161D",
+      "source_token": "--color-dig-surface",
+      "use": "Header/footer and section surface"
+    },
+    "card": {
+      "value": "#1B1A26",
+      "source_token": "--color-dig-card",
+      "use": "Cards and elevated panels"
+    },
+    "line": {
+      "value": "#2A2838",
+      "source_token": "--color-dig-line",
+      "use": "Borders and dividers"
+    },
+    "violet": {
+      "value": "#7C3AED",
+      "source_token": "--color-dig-violet",
+      "use": "Primary action/accent"
+    },
+    "lavender": {
+      "value": "#A78BFA",
+      "source_token": "--color-dig-lavender",
+      "use": "Secondary accent and brand mark"
+    },
+    "pale_lavender": {
+      "value": "#C4B5FD",
+      "source_token": "--color-dig-pale",
+      "use": "Gradient highlight and emphasis"
+    },
+    "text": {
+      "value": "#ECEAF4",
+      "source_token": "--color-dig-text",
+      "use": "Primary text on dark surfaces"
+    },
+    "muted_text": {
+      "value": "#9A96B0",
+      "source_token": "--color-dig-muted",
+      "use": "Secondary text on dark surfaces"
+    }
+  },
+  "suggested_production_mapping": {
+    "--paper": "--dig-bg",
+    "--paper-soft": "--dig-surface",
+    "--panel": "--dig-card",
+    "--ink": "--dig-text",
+    "--cobalt": "--dig-violet",
+    "--cobalt-dim": "--dig-lavender",
+    "--citrus": "--dig-pale"
+  }
+}
