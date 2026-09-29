@@ -2,6 +2,8 @@
 
 **Purpose:** This is the operating guide for the Sutika Capital team that owns, maintains, and changes [Descent TCG](https://descenttcg.com/). It records the verified production footprint, how to make safe edits, and the access items that must be completed for an unblocked handoff.
 
+> **Team operations:** Read [`SUTIKA_CAPITAL_TEAM_RUNBOOK.md`](SUTIKA_CAPITAL_TEAM_RUNBOOK.md) for the cross-platform GitHub, Vercel, Cloudflare, Resend, and Supabase access model, onboarding procedures, and incident workflows. Keep its private-register references out of this public repository.
+
 > **Current implementation:** A static HTML/CSS/JavaScript website with a Node.js prerender build. It is not a Supabase application and it has no CMS. Content, inventory, styling, and forms are maintained in this repository.
 
 ## 1. System of record

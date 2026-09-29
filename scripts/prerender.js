@@ -41,6 +41,7 @@ const EXCLUDE_FROM_COPY = new Set([
   '.DS_Store',
   'AGENTS.md',
   'INSTRUCTIONS.md',
+  'SUTIKA_CAPITAL_TEAM_RUNBOOK.md',
   // Build-time data export (truncated Collectr dump); no page loads it,
   // so it doesn't belong in dist/.
   'fortknox.js',
