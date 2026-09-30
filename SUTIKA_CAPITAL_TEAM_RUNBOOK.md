@@ -8,6 +8,8 @@
 
 **Source of truth for day-to-day code changes:** [`INSTRUCTIONS.md`](INSTRUCTIONS.md)
 
+**Remaining handoff work:** [`SUTIKA_CAPITAL_HANDOFF_ACTION_ITEMS.md`](SUTIKA_CAPITAL_HANDOFF_ACTION_ITEMS.md) is the prioritized closure tracker and sign-off standard.
+
 > **Security boundary:** This repository is public. Never add passwords, API keys, access tokens, database connection strings, personal email addresses, recovery codes, invoices, or account-owner contact details to this file, issues, pull requests, commits, or deployment logs. Keep those details in the team's private access register.
 
 ## 1. Purpose and operating model
