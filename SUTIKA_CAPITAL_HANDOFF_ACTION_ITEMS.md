@@ -29,12 +29,16 @@ The handoff is **not complete** because the team’s durable ownership, access, 
 |---|---|---|
 | Website and deployment | Live and healthy on Vercel | Ready |
 | Code and maintenance documentation | Repository, runbook, and contributor guidance are published | Ready |
+| Repository visibility | Repository is currently public; continued public visibility has not been formally accepted as a business decision | **Open** |
 | GitHub team access | Latest repository check found no team access grant | **Open** |
 | GitHub protection on `main` | Latest API check did not confirm active protection | **Open** |
 | Vercel project access | Deployment succeeds, but a connected maintainer identity cannot retrieve `descenttcg` project logs directly | **Open** |
 | Vercel form configuration | Required variable names are known; Production and Preview presence needs owner confirmation | **Open** |
-| Cloudflare and Resend operator access | Services are identified; role assignments and recovery ownership need recording | **Open** |
+| Form-data handling | Form submissions are delivered by email, not stored in a website database; mailbox retention and privacy ownership need confirmation | **Open** |
+| Domain registration | Both production/legacy domains resolve and have future public registration-expiry signals; registrar owner, renewal method, and billing custody are not evidenced | **Open** |
+| Cloudflare and Resend operator access | Services are active/verified; role assignments and recovery ownership need recording | **Open** |
 | External commerce and mailbox ownership | TCGplayer, Collectr, and legacy Ripping Zacks mailbox responsibilities need named owners | **Open** |
+| Backup, monitoring, and maintenance | No handoff-owned backup/restore evidence, monitoring decision, or routine dependency-maintenance cadence is recorded | **Open** |
 | Supabase | `nimbleins` is separate from the website and owner-unconfirmed | **Decision required** |
 
 ## 2. Completion standard
@@ -55,6 +59,7 @@ Complete these items before allowing routine production edits by a wider team.
 
 | ID | Required action | Accountable role | Completion evidence |
 |---|---|---|---|
+| P0-0 | Formally accept that `sutika-capital/descenttcg` is public, or approve a controlled move to private visibility after verifying the Vercel Git integration will remain intact. | Sutika Capital business owner + technical owner | Private register records the approved visibility, rationale, and reviewer. A public-source review confirms no secrets, customer data, recovery details, or private infrastructure exports are committed. |
 | P0-1 | Name a primary and backup technical owner for GitHub, Vercel, Cloudflare, Resend, the production mailbox, and any retained Supabase project. | Sutika Capital leadership | Restricted access register lists each system, primary owner, backup owner, recovery process, MFA state, and last review date. |
 | P0-2 | Create or designate a GitHub web-maintenance team and grant it **Maintain** or **Write** access to `sutika-capital/descenttcg`. | GitHub organization owner | Team appears in repository access; each active maintainer can clone, branch, push to a feature branch, and open a pull request. |
 | P0-3 | Review direct collaborators. Retain only approved people and use the GitHub team for normal access. Keep Admin limited to access/settings custodians. | GitHub organization owner | Private access register and GitHub audit show approved roles only. |
@@ -81,6 +86,9 @@ Complete these immediately after P0 and before declaring operational handoff com
 | P1-6 | Capture a current DNS record inventory and a rollback procedure before any DNS or domain change. | Cloudflare zone owner | Private change record includes current values, intended change, approver, and rollback steps. |
 | P1-7 | Confirm owners for TCGplayer Pro and the Collectr embed, including the correct process for changes or outages. | Business owner | Private access register identifies account owner, backup, and support/escalation path. |
 | P1-8 | Validate a production rollback: identify a prior healthy Vercel deployment and complete a non-disruptive rollback rehearsal or documented operator walkthrough. | Vercel project owner | Pull request or private change record includes rollback verification. |
+| P1-9 | Confirm the registrar, registrar-account owner, auto-renew setting, renewal-payment custodian, and expiration-alert destination for `descenttcg.com` and the legacy domain. | Business owner + domain administrator | Private access register records both domain renewal paths and at least two authorized recovery contacts. |
+| P1-10 | Confirm form-data handling: recipient mailbox ownership, retention/deletion policy, access limits, and alignment of the public privacy notice with the actual email-only submission flow. | Business owner + mailbox owner | Private review records the approved policy and any required privacy-notice update. |
+| P1-11 | Confirm renewal/payment accountability for Vercel, Cloudflare, Resend, domain registration, and external commerce/inventory services. | Business owner + billing custodian | Private access register identifies billing owner, backup contact, renewal alerts, and vendor escalation path without storing payment details. |
 
 ## 5. Priority 2 — operating acceptance and maintainability
 
@@ -94,6 +102,10 @@ These items make the handoff repeatable rather than dependent on institutional m
 | P2-4 | Establish quarterly access reviews for GitHub, Vercel, Cloudflare, Resend, mailbox administration, and any retained Supabase project. | Technical owner | First review is scheduled and the register includes reviewer and recurrence. |
 | P2-5 | Adopt a simple change log and incident path for production changes, form failures, and credential-exposure reports. | Technical owner | Team knows where to open operational requests and where sensitive discussions must occur. |
 | P2-6 | Keep visual work aligned with the active DIG purple dragon system and continue to retain the Descent TCG name and current site structure unless scope changes explicitly. | Brand owner + web maintainer | Visual pull requests include desktop and mobile review evidence. |
+| P2-7 | Establish a recoverable backup/export record for source, DNS configuration, Vercel configuration, form-email setup, and externally hosted inventory/embed settings. | Technical owner + service owners | Restore location, export cadence, and a recovery walkthrough are recorded privately; no secrets are placed in Git. |
+| P2-8 | Make and document an observability decision: configure an approved uptime/deployment/form-failure alerting path or explicitly accept the absence of automated monitoring. | Technical owner + business owner | Private register records selected tool, alert recipients, escalation route, and quarterly test; or the accepted no-monitoring decision. |
+| P2-9 | Establish a routine dependency and platform-maintenance cadence. The current runtime dependency audit has no reported vulnerabilities, but the result must be rechecked before material releases and at an agreed interval. | Web maintainer | Maintenance cadence, owner, and most recent audit result are recorded in the change log or private register. |
+| P2-10 | Test onboarding and offboarding against the runbook with one non-admin maintainer, including removal of access in a safe test/review scenario. | Technical owner | Private record confirms the checklist works and identifies any access systems that require owner intervention. |
 
 ## 6. Supabase decision gate
 
