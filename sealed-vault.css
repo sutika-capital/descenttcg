@@ -46,6 +46,25 @@
   object-fit:contain;
 }
 
+/* The TCG Vault begins directly with its first sealed category. Keep the
+   Boss Pikachu-to-booster transition and each grid-to-category transition
+   intentional instead of inheriting stacked section padding or zero gaps. */
+.sealed-product-section{
+  padding:0 0 72px;
+}
+.sealed-product-section #tcg-vault-sealed-content > .vault-series-banner{
+  margin:0 0 22px;
+}
+.sealed-product-section #tcg-vault-sealed-content > .vault-grid + .vault-series-banner{
+  margin-top:48px;
+}
+
+@media (max-width:560px){
+  .sealed-product-section{ padding-bottom:56px; }
+  .sealed-product-section #tcg-vault-sealed-content > .vault-series-banner{ margin-bottom:18px; }
+  .sealed-product-section #tcg-vault-sealed-content > .vault-grid + .vault-series-banner{ margin-top:36px; }
+}
+
 .vault-packs-section{
   padding-top:0;
   border-top:1px solid var(--vault-line);
