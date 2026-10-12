@@ -151,7 +151,7 @@ function buildVaultSet(setName, ownedCards, inventory) {
   return section;
 }
 
-function buildIconicShowcase(ownedIconicCards, totalIconic) {
+function buildIconicShowcase(ownedIconicCards, uniqueIconicCount, totalIconic) {
   const section = document.createElement('div');
   section.className = 'vault-set vault-iconic-showcase-section';
 
@@ -176,7 +176,7 @@ function buildIconicShowcase(ownedIconicCards, totalIconic) {
 
   const stats = document.createElement('div');
   stats.className = 'vault-series-stats';
-  stats.innerHTML = `<span><strong>${ownedIconicCards.length}</strong> of <strong>${totalIconic}</strong> collected</span>`;
+  stats.innerHTML = `<span><strong>${ownedIconicCards.length}</strong> slabs<span class="vault-series-stats-divider">&nbsp;•&nbsp;</span><strong>${uniqueIconicCount}</strong> of <strong>${totalIconic}</strong> unique collected</span>`;
   titleRow.appendChild(stats);
 
   banner.appendChild(titleRow);
@@ -301,6 +301,13 @@ function renderVault() {
   const ownedItems = LORCANA_ITEMS.filter(i => i.owned);
   const ownedIconic = ownedItems.filter(i => i.rarity === 'Iconic').length;
   const ownedEnchanted = ownedItems.filter(i => i.rarity === 'Enchanted').length;
+  const uniqueOwnedCount = rarity => new Set(
+    ownedItems
+      .filter(i => i.rarity === rarity)
+      .map(i => `${i.set || ''}::${i.rarity || ''}::${(i.name || '').trim().toLowerCase()}`),
+  ).size;
+  const uniqueIconic = uniqueOwnedCount('Iconic');
+  const uniqueEnchanted = uniqueOwnedCount('Enchanted');
   const ownedEpic = ownedItems.filter(i => i.rarity === 'Epic').length;
   const ownedPromo = ownedItems.filter(i => i.rarity === 'Promo').length;
   const ownedRare = ownedItems.filter(i => i.rarity === 'Rare').length;
@@ -334,17 +341,17 @@ function renderVault() {
 
   const iconicProgressLabel = document.getElementById('stat-iconic-progress-label');
   const iconicProgressFill = document.getElementById('stat-iconic-progress-fill');
-  if (iconicProgressLabel) iconicProgressLabel.textContent = `${ownedIconic} of ${totalIconic} collected`;
-  if (iconicProgressFill) iconicProgressFill.style.width = `${totalIconic ? Math.min(100, (ownedIconic / totalIconic) * 100) : 0}%`;
+  if (iconicProgressLabel) iconicProgressLabel.textContent = `${uniqueIconic} of ${totalIconic} unique collected`;
+  if (iconicProgressFill) iconicProgressFill.style.width = `${totalIconic ? Math.min(100, (uniqueIconic / totalIconic) * 100) : 0}%`;
 
   const enchantedProgressLabel = document.getElementById('stat-enchanted-progress-label');
   const enchantedProgressFill = document.getElementById('stat-enchanted-progress-fill');
-  if (enchantedProgressLabel) enchantedProgressLabel.textContent = `${ownedEnchanted} of ${totalEnchanted} collected`;
-  if (enchantedProgressFill) enchantedProgressFill.style.width = `${totalEnchanted ? Math.min(100, (ownedEnchanted / totalEnchanted) * 100) : 0}%`;
+  if (enchantedProgressLabel) enchantedProgressLabel.textContent = `${uniqueEnchanted} of ${totalEnchanted} unique collected`;
+  if (enchantedProgressFill) enchantedProgressFill.style.width = `${totalEnchanted ? Math.min(100, (uniqueEnchanted / totalEnchanted) * 100) : 0}%`;
 
   const ownedIconicCards = ownedItems.filter(i => i.rarity === 'Iconic');
   if (ownedIconicCards.length > 0) {
-    content.appendChild(buildIconicShowcase(ownedIconicCards, totalIconic));
+    content.appendChild(buildIconicShowcase(ownedIconicCards, uniqueIconic, totalIconic));
   }
 
   // Sealed Products showcase — every set with at least one box or case,
