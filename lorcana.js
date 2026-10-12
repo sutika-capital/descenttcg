@@ -1,5 +1,5 @@
 // ============================================================
-// RIPPING ZACKS — Lorcana Chase Cards (lorcana.html)
+// DESCENT TCG — Lorcana Vault inventory
 // Fully hardcoded — name, set, rarity, ownership, and pricing
 // (targetPrice / purchasePrice / marketPrice) are all maintained
 // directly in this file. All three price fields are optional —
