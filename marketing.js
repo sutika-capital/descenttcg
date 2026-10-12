@@ -1,6 +1,7 @@
 // ============================================================
 // DESCENT TCG — Collectr Slabs Vault inventory
-// Source: authenticated Collectr Slabs Vault snapshot, 2026-10-12.
+// Source: authenticated Collectr Slabs Vault snapshot, 2026-10-12,
+// plus the owner-approved Team Boss Pikachu (JP) set restoration.
 // Values are the tracked values displayed by Collectr; a null market
 // value means Collectr did not expose a separate market quote.
 // ============================================================
@@ -28,10 +29,24 @@ const TRACKER_PERMANENT_PHOTOS = {
   '3 deck battle (jp)': 'assets/photos/marketing/3-deck-battle-jp.webp',
   'retro teenage mutant ninja turtles (tmnt02)': 'assets/photos/marketing/retro-teenage-mutant-ninja-turtles.webp',
   'pikachu': 'assets/photos/marketing/s-promo.webp',
+  'team boss pikachu (rocket) (jp)': 'assets/photos/marketing/team-boss-pikachu-rocket-jp.webp',
+  'team boss pikachu (aqua) (jp)': 'assets/photos/marketing/team-boss-pikachu-aqua-jp.webp',
+  'team boss pikachu (magma) (jp)': 'assets/photos/marketing/team-boss-pikachu-magma-jp.webp',
+  'team boss pikachu (galactic) (jp)': 'assets/photos/marketing/team-boss-pikachu-galactic-jp.webp',
+  'team boss pikachu (plasma) (jp)': 'assets/photos/marketing/team-boss-pikachu-plasma-jp.webp',
+  'team boss pikachu (flare) (jp)': 'assets/photos/marketing/team-boss-pikachu-flare-jp.webp',
+  'team boss pikachu (skull) (jp)': 'assets/photos/marketing/team-boss-pikachu-skull-jp.webp',
 };
 
 const TRACKER_ITEMS = [
   { name: 'Suicune', set: 'Nintendo Promos', no: '30', rarity: 'Holo Rare', targetPrice: 12000, purchasePrice: null, marketPrice: 275.69, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Other Slabs', quantity: 1 },
+  { name: 'Team Boss Pikachu (Rocket) (JP)', set: 'Sun & Moon Promos JP', no: '191/SM-P', rarity: 'Holofoil', targetPrice: null, purchasePrice: null, marketPrice: 3867.14, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Team Boss Pikachu (JP)', quantity: 1 },
+  { name: 'Team Boss Pikachu (Aqua) (JP)', set: 'Sun & Moon Promos JP', no: '192/SM-P', rarity: 'Holofoil', targetPrice: null, purchasePrice: null, marketPrice: 3678.25, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Team Boss Pikachu (JP)', quantity: 1 },
+  { name: 'Team Boss Pikachu (Magma) (JP)', set: 'Sun & Moon Promos JP', no: '193/SM-P', rarity: 'Holofoil', targetPrice: null, purchasePrice: null, marketPrice: 2513.89, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Team Boss Pikachu (JP)', quantity: 1 },
+  { name: 'Team Boss Pikachu (Galactic) (JP)', set: 'Sun & Moon Promos JP', no: '194/SM-P', rarity: 'Holofoil', targetPrice: null, purchasePrice: null, marketPrice: 4022.33, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Team Boss Pikachu (JP)', quantity: 1 },
+  { name: 'Team Boss Pikachu (Plasma) (JP)', set: 'Sun & Moon Promos JP', no: '195/SM-P', rarity: 'Holofoil', targetPrice: null, purchasePrice: null, marketPrice: 3215.62, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Team Boss Pikachu (JP)', quantity: 1 },
+  { name: 'Team Boss Pikachu (Flare) (JP)', set: 'Sun & Moon Promos JP', no: '196/SM-P', rarity: 'Holofoil', targetPrice: null, purchasePrice: null, marketPrice: 2767.00, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Team Boss Pikachu (JP)', quantity: 1 },
+  { name: 'Team Boss Pikachu (Skull) (JP)', set: 'Sun & Moon Promos JP', no: '197/SM-P', rarity: 'Holofoil', targetPrice: null, purchasePrice: null, marketPrice: 3527.25, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Team Boss Pikachu (JP)', quantity: 1 },
   { name: "Ooyama's Pikachu (JP)", set: 'Vending Series 3 (Green)', no: '025', rarity: 'Rare', targetPrice: 7263.15, purchasePrice: null, marketPrice: null, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Vending Series 3 (Green)', quantity: 1 },
   { name: 'Mewtwo (JP)', set: 'Vending Series 3 (Green)', no: '150', rarity: 'Rare', targetPrice: 3809.49, purchasePrice: null, marketPrice: null, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Vending Series 3 (Green)', quantity: 1 },
   { name: 'Ditto', set: 'EX Delta Species', no: '61', rarity: 'Common', targetPrice: 2567.55, purchasePrice: null, marketPrice: null, owned: true, grade: 'PSA 10.0 GEM - MT', series: 'Other Slabs', quantity: 1 },
