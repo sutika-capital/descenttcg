@@ -148,3 +148,35 @@
   border-radius:2px;
   background:linear-gradient(90deg, var(--vault-gold-br), transparent 85%);
 }
+
+/* ---- TCG Vault rhythm ----
+   The parent labels each major collection. Keep the first card row
+   close to that parent, then use one consistent, smaller interval
+   between named collections and between slabs and sealed product. */
+.tcg-vault-body .vault-body-section{
+  padding:44px 0 0;
+}
+.tcg-vault-body .vault-body-section + .vault-body-section{
+  padding:72px 0 92px;
+}
+.tcg-vault-body #tcg-vault-slabs-content > .vault-grid:first-child{
+  margin-top:26px;
+}
+.tcg-vault-body #tcg-vault-slabs-content .slab-series-banner,
+.tcg-vault-body #tcg-vault-sealed-content .vault-series-banner{
+  margin:40px 0 20px;
+}
+.tcg-vault-body #tcg-vault-slabs-content .vault-grid + .slab-series-banner,
+.tcg-vault-body #tcg-vault-sealed-content .vault-grid + .vault-series-banner{
+  margin-top:40px;
+}
+
+@media (max-width:560px){
+  .tcg-vault-body .vault-body-section{ padding-top:34px; }
+  .tcg-vault-body .vault-body-section + .vault-body-section{ padding:54px 0 72px; }
+  .tcg-vault-body #tcg-vault-slabs-content > .vault-grid:first-child{ margin-top:20px; }
+  .tcg-vault-body #tcg-vault-slabs-content .slab-series-banner,
+  .tcg-vault-body #tcg-vault-sealed-content .vault-series-banner{ margin:30px 0 16px; }
+  .tcg-vault-body #tcg-vault-slabs-content .vault-grid + .slab-series-banner,
+  .tcg-vault-body #tcg-vault-sealed-content .vault-grid + .vault-series-banner{ margin-top:30px; }
+}

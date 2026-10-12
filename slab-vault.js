@@ -97,12 +97,28 @@ function renderSlabVaultSection(container) {
   container.innerHTML = '';
   if (!ownedItems.length) return;
 
+  // The primary Graded Slabs heading already labels the catch-all cards.
+  // Render those directly beneath it instead of repeating an "Other Slabs"
+  // banner. Named collections retain their own compact section banner.
+  const directCards = [];
   const groups = new Map();
   ownedItems.forEach((item) => {
     const series = item.series || 'Graded Slabs';
+    if (series === 'Other Slabs' || series === 'Graded Slabs') {
+      directCards.push(item);
+      return;
+    }
     if (!groups.has(series)) groups.set(series, []);
     groups.get(series).push(item);
   });
+
+  if (directCards.length) {
+    directCards.sort((a, b) => (b.targetPrice || b.marketPrice || 0) - (a.targetPrice || a.marketPrice || 0));
+    const grid = document.createElement('div');
+    grid.className = 'vault-grid';
+    directCards.forEach(card => grid.appendChild(buildSlabVaultPlaque(card)));
+    container.appendChild(grid);
+  }
 
   groups.forEach((cards, series) => {
     cards.sort((a, b) => (b.targetPrice || b.marketPrice || 0) - (a.targetPrice || a.marketPrice || 0));
