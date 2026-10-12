@@ -6,7 +6,7 @@
 // page's own data + renderer scripts exactly as a browser would —
 // then serializes the fully-rendered DOM back to static HTML.
 //
-// Output: dist/ contains the 4 prerendered vault pages plus
+// Output: dist/ contains the 3 prerendered vault pages plus
 // verbatim copies of every other site file. The api/ directory
 // is intentionally NOT copied — Vercel builds those serverless
 // functions from the project root independently of the static
@@ -48,7 +48,7 @@ const EXCLUDE_FROM_COPY = new Set([
   'fortknox.js',
 ]);
 
-const VAULT_PAGES = ['lorcana-vault.html', 'slab-vault.html', 'sealed-vault.html', 'fort-knox-vault.html'];
+const VAULT_PAGES = ['lorcana-vault.html', 'sealed-vault.html', 'fort-knox-vault.html'];
 
 // ------------------------------------------------------------
 // Static copy of everything that isn't build tooling.
@@ -216,7 +216,7 @@ function injectJsonLd(dom, page, items, itemCondition) {
       item: product(it.name, pageUrl, it.price, {
         slug: uniqueSlug(it.name),
         image: images.get((it.name || '').trim().toLowerCase()) || null,
-        itemCondition,
+        itemCondition: it.itemCondition || itemCondition,
       }),
     })),
   };
@@ -263,36 +263,22 @@ function itemsForCollection(window) {
   return items;
 }
 
-function itemsForSlabVault(window) {
-  return evalIn(window, 'typeof TRACKER_ITEMS !== "undefined" ? TRACKER_ITEMS : []', [])
+function itemsForTcgVault(window) {
+  const slabs = evalIn(window, 'typeof TRACKER_ITEMS !== "undefined" ? TRACKER_ITEMS : []', [])
     .filter((i) => i.owned)
-    .map((i) => ({ name: i.name, price: i.marketPrice }));
-}
-
-function itemsForSealedVault(window) {
-  const items = [];
-  const inventory = evalIn(window, 'typeof BOOSTERS_INVENTORY !== "undefined" ? BOOSTERS_INVENTORY : {}', {});
-  const keyFor = (n) => (n || '').trim().toLowerCase();
-
-  evalIn(window, 'typeof BOOSTERS_ITEMS !== "undefined" ? BOOSTERS_ITEMS : []', []).forEach((i) => {
-    const inv = inventory[keyFor(i.name)] || {};
-    if ((inv.boosterBoxes || 0) > 0 || (inv.cases || 0) > 0 || (inv.etbs || 0) > 0 || (inv.upc || 0) > 0) {
-      items.push({ name: i.name, price: i.marketPrice });
-    }
-  });
-  evalIn(window, 'typeof BOOSTERS_PACKS !== "undefined" ? BOOSTERS_PACKS : []', []).forEach((p) => {
-    if ((p.qty || 0) > 0) items.push({ name: p.name, price: p.price });
-  });
-  evalIn(window, 'typeof BOOSTERS_OTHER !== "undefined" ? BOOSTERS_OTHER : []', []).forEach((p) => {
-    if ((p.qty || 0) > 0) items.push({ name: p.name, price: p.price });
-  });
-  evalIn(window, 'typeof MAGIC_TMNT_ITEMS !== "undefined" ? MAGIC_TMNT_ITEMS : []', []).forEach((i) => {
-    if ((i.qty || 0) > 0) items.push({ name: i.name, price: i.marketPrice });
-  });
-  evalIn(window, 'typeof JP_SPECIALS_ITEMS !== "undefined" ? JP_SPECIALS_ITEMS : []', []).forEach((i) => {
-    if ((i.qty || 0) > 0) items.push({ name: i.name, price: null });
-  });
-  return items;
+    .map((i) => ({
+      name: i.name,
+      price: i.targetPrice ?? i.marketPrice,
+      itemCondition: 'https://schema.org/UsedCondition',
+    }));
+  const sealed = evalIn(window, 'typeof TCG_SEALED_ITEMS !== "undefined" ? TCG_SEALED_ITEMS : []', [])
+    .filter((i) => (i.qty || 0) > 0)
+    .map((i) => ({
+      name: i.name,
+      price: i.marketPrice ?? i.trackedValue,
+      itemCondition: 'https://schema.org/NewCondition',
+    }));
+  return [...slabs, ...sealed];
 }
 
 // fort-knox-vault.html is a third-party Collectr iframe page. Its
@@ -301,12 +287,12 @@ function itemsForSealedVault(window) {
 // prerendered static HTML.
 
 // ------------------------------------------------------------
-// Per-page schema.org itemCondition for offers: sealed product is
-// new; singles/slabs/lorcana chase cards are second-hand.
+// Per-page schema.org itemCondition for offers. The unified TCG Vault
+// provides an item-level condition because it contains both graded
+// cards and sealed products.
 // ------------------------------------------------------------
 const ITEM_CONDITION_BY_PAGE = {
   'lorcana-vault.html': 'https://schema.org/UsedCondition',
-  'slab-vault.html': 'https://schema.org/UsedCondition',
   'sealed-vault.html': 'https://schema.org/NewCondition',
 };
 
@@ -316,8 +302,7 @@ async function main() {
 
   const itemBuilders = {
     'lorcana-vault.html': itemsForCollection,
-    'slab-vault.html': itemsForSlabVault,
-    'sealed-vault.html': itemsForSealedVault,
+    'sealed-vault.html': itemsForTcgVault,
   };
 
   for (const page of VAULT_PAGES) {
