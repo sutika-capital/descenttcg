@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0B0A12">
-<title>Sealed Vault — Booster Boxes & ETBs | Descent TCG</title>
-<meta name="description" content="Sealed Pokémon booster boxes, cases, and Pokémon Center ETBs from the Descent TCG collection in Bradenton, FL. Transparent pricing — make an offer on any box.">
+<title>TCG Vault — Graded Cards & Sealed Product | Descent TCG</title>
+<meta name="description" content="The Descent TCG collection in Bradenton, FL: professionally graded slabs, sealed booster boxes, vintage packs, premium products, and regional exclusives tracked from Collectr.">
 <link rel="canonical" href="https://descenttcg.com/sealed-vault">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Descent TCG">
-<meta property="og:title" content="Sealed Vault — Booster Boxes & ETBs | Descent TCG">
-<meta property="og:description" content="Sealed Pokémon booster boxes, cases, and Pokémon Center ETBs from the Descent TCG collection in Bradenton, FL. Transparent pricing — make an offer on any box.">
+<meta property="og:title" content="TCG Vault — Graded Cards & Sealed Product | Descent TCG">
+<meta property="og:description" content="Professionally graded slabs and sealed TCG product, together in one collection vault.">
 <meta property="og:url" content="https://descenttcg.com/sealed-vault">
 <meta property="og:image" content="https://descenttcg.com/assets/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sealed Vault — Booster Boxes & ETBs | Descent TCG">
-<meta name="twitter:description" content="Sealed Pokémon booster boxes, cases, and Pokémon Center ETBs from the Descent TCG collection in Bradenton, FL. Transparent pricing — make an offer on any box.">
+<meta name="twitter:title" content="TCG Vault — Graded Cards & Sealed Product | Descent TCG">
+<meta name="twitter:description" content="Professionally graded slabs and sealed TCG product, together in one collection vault.">
 <link rel="icon" type="image/x-icon" href="assets/brand/dig-purple-dragon/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/dig-purple-dragon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/dig-purple-dragon/favicon-16x16.png">
@@ -26,8 +26,9 @@
 <link rel="stylesheet" href="collection.css">
 <link rel="stylesheet" href="offer-modal.css">
 <link rel="stylesheet" href="sealed-vault.css">
+<link rel="stylesheet" href="slab-vault.css">
 </head>
-<body class="vault-body sealed-vault-body">
+<body class="vault-body sealed-vault-body tcg-vault-body">
 
 <header class="site-header">
   <div class="wrap">
@@ -36,8 +37,7 @@
       <a href="/">Home</a>
       <a href="our-store">Our Store</a>
       <a href="lorcana-vault">Lorcana Vault</a>
-      <a href="slab-vault">Slab Vault</a>
-      <a href="sealed-vault" class="active">Sealed Vault</a>
+      <a href="sealed-vault" class="active">TCG Vault</a>
       <a href="fort-knox-vault">Fort Knox Vault</a>
       <a href="about">About</a>
       <a href="contact">Contact</a>
@@ -48,26 +48,20 @@
 
 <section class="vault-hero">
   <div class="wrap vault-hero-inner">
-    <span class="vault-eyebrow">The Sealed Product Archive</span>
-    <h1 class="vault-title">Sealed Vault</h1>
-    <p class="vault-sub">Every booster box, case, and Pokémon Center ETB that's actually made it into storage — sealed, stacked, and accounted for.</p>
+    <span class="vault-eyebrow">The TCG Archive</span>
+    <h1 class="vault-title">TCG Vault</h1>
+    <p class="vault-sub">Graded slabs and sealed product together in one archive — a Collectr-synced snapshot of what is actually in the collection.</p>
 
     <div class="vault-stats vault-stats-rows" id="vault-stats">
       <div class="vault-stats-row">
         <div class="vault-stat">
+          <span class="vault-stat-num" id="stat-slabs">0</span>
+          <span class="vault-stat-label">graded slabs</span>
+        </div>
+        <div class="vault-stat">
           <span class="vault-stat-num" id="stat-boxes">0</span>
           <span class="vault-stat-label">booster boxes</span>
         </div>
-        <div class="vault-stat">
-          <span class="vault-stat-num" id="stat-cases">0</span>
-          <span class="vault-stat-label">sealed cases</span>
-        </div>
-        <div class="vault-stat">
-          <span class="vault-stat-num" id="stat-etbs">0</span>
-          <span class="vault-stat-label">Pokémon Center ETBs</span>
-        </div>
-      </div>
-      <div class="vault-stats-row">
         <div class="vault-stat">
           <span class="vault-stat-num" id="stat-packs">0</span>
           <span class="vault-stat-label">booster packs</span>
@@ -76,14 +70,6 @@
           <span class="vault-stat-num" id="stat-other">0</span>
           <span class="vault-stat-label">other sealed items</span>
         </div>
-        <div class="vault-stat">
-          <span class="vault-stat-num" id="stat-tmnt">0</span>
-          <span class="vault-stat-label">TMNT sealed items</span>
-        </div>
-        <div class="vault-stat">
-          <span class="vault-stat-num" id="stat-jp-specials">0</span>
-          <span class="vault-stat-label">JP specials</span>
-        </div>
       </div>
     </div>
   </div>
@@ -95,17 +81,13 @@
       <span class="vault-series-corner vault-series-corner-tl"></span>
       <span class="vault-series-corner vault-series-corner-br"></span>
       <div class="vault-series-title-row">
-        <div class="vault-series-title-group">
-          <h2 class="vault-series-title">Booster Boxes &amp; Cases</h2>
-        </div>
-        <div class="vault-series-stats">
-          <span><strong id="section-stat-boxes">0</strong> sets with boxes/cases</span>
-        </div>
+        <div class="vault-series-title-group"><h2 class="vault-series-title">Graded Slabs</h2></div>
+        <div class="vault-series-stats"><span><strong id="section-stat-slabs">0</strong> physical slabs</span></div>
       </div>
       <div class="vault-series-rule"></div>
-      <p class="vault-series-desc">Full boxes and sealed cases, organized by set.</p>
+      <p class="vault-series-desc">Professionally graded cards synchronized from the Collectr Slabs Vault.</p>
     </div>
-    <div id="vault-content"></div>
+    <div id="tcg-vault-slabs-content"></div>
   </div>
 </section>
 
@@ -115,99 +97,13 @@
       <span class="vault-series-corner vault-series-corner-tl"></span>
       <span class="vault-series-corner vault-series-corner-br"></span>
       <div class="vault-series-title-row">
-        <div class="vault-series-title-group">
-          <h2 class="vault-series-title">Pokémon Center ETBs</h2>
-        </div>
-        <div class="vault-series-stats">
-          <span><strong id="section-stat-etbs">0</strong> ETBs</span>
-        </div>
+        <div class="vault-series-title-group"><h2 class="vault-series-title">Sealed Product</h2></div>
+        <div class="vault-series-stats"><span>Collectr Sealed Vault snapshot</span></div>
       </div>
       <div class="vault-series-rule"></div>
-      <p class="vault-series-desc">Elite Trainer Boxes, organized by set.</p>
+      <p class="vault-series-desc">Booster boxes, individual packs, premium collections, regional exclusives, and Magic: The Gathering product.</p>
     </div>
-    <div id="vault-etb-content"></div>
-  </div>
-</section>
-
-<section class="section vault-body-section vault-packs-section">
-  <div class="wrap">
-    <div class="vault-series-banner">
-      <span class="vault-series-corner vault-series-corner-tl"></span>
-      <span class="vault-series-corner vault-series-corner-br"></span>
-      <div class="vault-series-title-row">
-        <div class="vault-series-title-group">
-          <h2 class="vault-series-title">Individual Packs</h2>
-        </div>
-        <div class="vault-series-stats">
-          <span><strong id="section-stat-packs">0</strong> packs</span>
-        </div>
-      </div>
-      <div class="vault-series-rule"></div>
-      <p class="vault-series-desc">Loose booster packs — vintage rips and singles that don't belong to a full box.</p>
-    </div>
-    <div id="vault-packs-content"></div>
-  </div>
-</section>
-
-<section class="section vault-body-section vault-other-section">
-  <div class="wrap">
-    <div class="vault-series-banner">
-      <span class="vault-series-corner vault-series-corner-tl"></span>
-      <span class="vault-series-corner vault-series-corner-br"></span>
-      <div class="vault-series-title-row">
-        <div class="vault-series-title-group">
-          <h2 class="vault-series-title">Other Sealed Items</h2>
-        </div>
-        <div class="vault-series-stats">
-          <span><strong id="section-stat-other">0</strong> items</span>
-        </div>
-      </div>
-      <div class="vault-series-rule"></div>
-      <p class="vault-series-desc">Ultra Premium Collections, tins, deck displays, and other sealed product that isn't a booster box, case, or pack.</p>
-    </div>
-    <div id="vault-other-content"></div>
-  </div>
-</section>
-
-<section class="section vault-body-section tmnt-highlight">
-  <div class="wrap">
-    <div class="vault-series-banner tmnt-highlight-banner">
-      <span class="vault-series-corner vault-series-corner-tl"></span>
-      <span class="vault-series-corner vault-series-corner-br"></span>
-      <div class="vault-series-title-row">
-        <div class="vault-series-title-group">
-          <span class="tmnt-badge">Shell-Shocked Spotlight</span>
-          <h2 class="vault-series-title">Magic: The Gathering — Teenage Mutant Ninja Turtles</h2>
-        </div>
-        <div class="vault-series-stats">
-          <span><strong id="section-stat-tmnt">0</strong> items owned</span>
-        </div>
-      </div>
-      <div class="vault-series-rule"></div>
-      <p class="vault-series-desc">Cowabunga — the full turtle lineup from Magic's TMNT crossover set, sealed and stacked in the vault.</p>
-    </div>
-    <div id="vault-tmnt-content"></div>
-  </div>
-</section>
-
-<section class="section vault-body-section jp-specials-highlight">
-  <div class="wrap">
-    <div class="vault-series-banner jp-specials-highlight-banner">
-      <span class="vault-series-corner vault-series-corner-tl"></span>
-      <span class="vault-series-corner vault-series-corner-br"></span>
-      <div class="vault-series-title-row">
-        <div class="vault-series-title-group">
-          <span class="jp-specials-badge">Regional Spotlight</span>
-          <h2 class="vault-series-title">Japanese Pokémon Center Specials</h2>
-        </div>
-        <div class="vault-series-stats">
-          <span><strong id="section-stat-jp-specials">0</strong> items owned</span>
-        </div>
-      </div>
-      <div class="vault-series-rule"></div>
-      <p class="vault-series-desc">Regional-exclusive boxes from Pokémon Center Japan, sealed and stacked in the vault.</p>
-    </div>
-    <div id="vault-jp-specials-content"></div>
+    <div id="tcg-vault-sealed-content"></div>
   </div>
 </section>
 
@@ -217,16 +113,13 @@
       <div>
         <a href="/" class="logo"><img src="assets/brand/dig-purple-dragon/dragon-mark.png" alt="Descent TCG purple dragon mark" class="logo-mark">Descent</a>
         <p class="footer-blurb">Collector-run trading card shop at 5205 33rd St E, Bradenton, FL. Collector-trusted since day one.</p>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/rippingzacks/" target="_blank" rel="noopener">Instagram</a>
-        </div>
+        <div class="footer-social"><a href="https://www.instagram.com/rippingzacks/" target="_blank" rel="noopener">Instagram</a></div>
       </div>
       <div class="footer-col">
         <h4>Shop</h4>
         <ul>
           <li><a href="lorcana-vault">Lorcana Vault</a></li>
-          <li><a href="slab-vault">Slab Vault</a></li>
-          <li><a href="sealed-vault">Sealed Vault</a></li>
+          <li><a href="sealed-vault">TCG Vault</a></li>
           <li><a href="fort-knox-vault">Fort Knox Vault</a></li>
         </ul>
       </div>
@@ -246,56 +139,32 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Descent TCG. All rights reserved.</span>
-      <span>Collector-run. Collector-trusted.</span>
-    </div>
+    <div class="footer-bottom"><span>© 2026 Descent TCG. All rights reserved.</span><span>Collector-run. Collector-trusted.</span></div>
   </div>
 </footer>
 
 <script src="script.js"></script>
+<script src="marketing.js"></script>
+<script src="slab-vault.js"></script>
 <script src="boosters.js"></script>
-<script src="magic-tmnt.js"></script>
-<script src="jp-specials.js"></script>
 <script src="sealed-vault.js"></script>
 <div class="offer-modal-overlay" id="offer-modal-overlay">
   <div class="offer-modal" role="dialog" aria-modal="true" aria-labelledby="offer-modal-title">
     <button type="button" class="offer-modal-close" id="offer-modal-close" aria-label="Close">&times;</button>
     <h3 id="offer-modal-title" class="offer-modal-title">Make an Offer</h3>
     <p class="offer-modal-item" id="offer-modal-item-name">Item Name</p>
-
     <form id="offer-form" class="offer-form">
       <p class="offer-hidden-field"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
       <input type="hidden" name="item" id="offer-item-input">
-
-      <label class="offer-field">
-        <span>Your Offer ($)</span>
-        <input type="number" name="offer" min="1" step="1" required>
-      </label>
-      <label class="offer-field">
-        <span>Your Name</span>
-        <input type="text" name="name" required>
-      </label>
-      <label class="offer-field">
-        <span>Email or Phone</span>
-        <input type="text" name="contact" required>
-      </label>
-      <label class="offer-field">
-        <span>Message (optional)</span>
-        <textarea name="message" rows="3"></textarea>
-      </label>
-
+      <label class="offer-field"><span>Your Offer ($)</span><input type="number" name="offer" min="1" step="1" required></label>
+      <label class="offer-field"><span>Your Name</span><input type="text" name="name" required></label>
+      <label class="offer-field"><span>Email or Phone</span><input type="text" name="contact" required></label>
+      <label class="offer-field"><span>Message (optional)</span><textarea name="message" rows="3"></textarea></label>
       <button type="submit" class="offer-submit-btn">Send Offer</button>
       <p class="offer-form-note">Offers are reviewed manually. If accepted, payment is handled directly via Venmo or Zelle.</p>
     </form>
-
-    <div class="offer-success" id="offer-success" hidden>
-      <h4>Offer sent!</h4>
-      <p>Thanks — we'll review it and reach out using the contact info you provided.</p>
-    </div>
-    <div class="offer-error" id="offer-error" hidden>
-      <p>Something went wrong sending your offer. Please try again, or reach out directly via the Contact page.</p>
-    </div>
+    <div class="offer-success" id="offer-success" hidden><h4>Offer sent!</h4><p>Thanks — we'll review it and reach out using the contact info you provided.</p></div>
+    <div class="offer-error" id="offer-error" hidden><p>Something went wrong sending your offer. Please try again, or reach out directly via the Contact page.</p></div>
   </div>
 </div>
 <script src="offer-modal.js"></script>

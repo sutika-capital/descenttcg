@@ -5,7 +5,8 @@
    were remapped.
    ============================================================ */
 
-.slab-vault-body{
+.slab-vault-body,
+.tcg-vault-body{
   --vault-ink:      #0B0A12;
   --vault-panel:    #16161D;
   --vault-panel-2:  #1B1A26;
@@ -19,21 +20,25 @@
   background:var(--vault-ink);
 }
 
-.slab-vault-body .vault-hero{
+.slab-vault-body .vault-hero,
+.tcg-vault-body .vault-hero{
   background:
     radial-gradient(ellipse at 50% -10%, rgba(124,58,237,0.20), transparent 60%),
     var(--vault-ink);
 }
 
-.slab-vault-body .vault-plaque:hover{
+.slab-vault-body .vault-plaque:hover,
+.tcg-vault-body .vault-plaque:hover{
   box-shadow:0 22px 40px -24px rgba(0,0,0,0.7);
 }
 
-.slab-vault-body .vault-plaque{
+.slab-vault-body .vault-plaque,
+.tcg-vault-body .vault-plaque{
   padding-bottom:40px;
 }
 
-.slab-vault-body .vault-plaque-badges{
+.slab-vault-body .vault-plaque-badges,
+.tcg-vault-body .vault-plaque-badges{
   position:absolute;
   bottom:14px;
   right:16px;
@@ -43,7 +48,9 @@
 }
 
 .slab-vault-body .vault-plaque-grade,
-.slab-vault-body .vault-plaque-note{
+.slab-vault-body .vault-plaque-note,
+.tcg-vault-body .vault-plaque-grade,
+.tcg-vault-body .vault-plaque-note{
   font-family:var(--mono);
   font-size:0.62rem;
   font-weight:700;
@@ -55,12 +62,14 @@
   white-space:nowrap;
 }
 
-.slab-vault-body .vault-plaque-grade{
+.slab-vault-body .vault-plaque-grade,
+.tcg-vault-body .vault-plaque-grade{
   color:var(--vault-ink);
   background:var(--vault-gold-br);
 }
 
-.slab-vault-body .vault-plaque-note{
+.slab-vault-body .vault-plaque-note,
+.tcg-vault-body .vault-plaque-note{
   color:var(--vault-gold-br);
   background:transparent;
   border:1px solid var(--vault-line);

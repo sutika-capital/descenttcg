@@ -11,8 +11,10 @@
     { "source": "/lorcana", "destination": "/lorcana-vault", "permanent": true },
     { "source": "/boosters.html", "destination": "/sealed-vault", "permanent": true },
     { "source": "/boosters", "destination": "/sealed-vault", "permanent": true },
-    { "source": "/marketing.html", "destination": "/slab-vault", "permanent": true },
-    { "source": "/marketing", "destination": "/slab-vault", "permanent": true }
+    { "source": "/marketing.html", "destination": "/sealed-vault", "permanent": true },
+    { "source": "/marketing", "destination": "/sealed-vault", "permanent": true },
+    { "source": "/slab-vault.html", "destination": "/sealed-vault", "permanent": true },
+    { "source": "/slab-vault", "destination": "/sealed-vault", "permanent": true }
   ],
   "headers": [
     {
