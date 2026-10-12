@@ -46,6 +46,11 @@ const EXCLUDE_FROM_COPY = new Set([
   // Build-time data export (truncated Collectr dump); no page loads it,
   // so it doesn't belong in dist/.
   'fortknox.js',
+  // Archived graded-card data and presentation are retained in source but
+  // intentionally not shipped with the sealed-only public TCG Vault.
+  'marketing.js',
+  'slab-vault.js',
+  'slab-vault.css',
 ]);
 
 const VAULT_PAGES = ['lorcana-vault.html', 'sealed-vault.html', 'fort-knox-vault.html'];
@@ -264,21 +269,13 @@ function itemsForCollection(window) {
 }
 
 function itemsForTcgVault(window) {
-  const slabs = evalIn(window, 'typeof TRACKER_ITEMS !== "undefined" ? TRACKER_ITEMS : []', [])
-    .filter((i) => i.owned)
-    .map((i) => ({
-      name: i.name,
-      price: i.targetPrice ?? i.marketPrice,
-      itemCondition: 'https://schema.org/UsedCondition',
-    }));
-  const sealed = evalIn(window, 'typeof TCG_SEALED_ITEMS !== "undefined" ? TCG_SEALED_ITEMS : []', [])
+  return evalIn(window, 'typeof TCG_SEALED_ITEMS !== "undefined" ? TCG_SEALED_ITEMS : []', [])
     .filter((i) => (i.qty || 0) > 0)
     .map((i) => ({
       name: i.name,
       price: i.marketPrice ?? i.trackedValue,
       itemCondition: 'https://schema.org/NewCondition',
     }));
-  return [...slabs, ...sealed];
 }
 
 // fort-knox-vault.html is a third-party Collectr iframe page. Its
@@ -287,9 +284,8 @@ function itemsForTcgVault(window) {
 // prerendered static HTML.
 
 // ------------------------------------------------------------
-// Per-page schema.org itemCondition for offers. The unified TCG Vault
-// provides an item-level condition because it contains both graded
-// cards and sealed products.
+// Per-page schema.org itemCondition for offers. The TCG Vault now
+// contains sealed product only.
 // ------------------------------------------------------------
 const ITEM_CONDITION_BY_PAGE = {
   'lorcana-vault.html': 'https://schema.org/UsedCondition',

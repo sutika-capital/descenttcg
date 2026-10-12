@@ -61,7 +61,7 @@ The contact inbox currently remains on the Ripping Zacks Microsoft 365 domain. C
 | Vault | Source files | Editing guidance |
 |---|---|---|
 | Lorcana Vault | `lorcana.js` | Update only after inventory owner approval. `null` prices are intentionally hidden. |
-| TCG Vault | `marketing.js`, `boosters.js`, `slab-vault.js`, `sealed-vault.js` | Update only after inventory owner approval. The public route remains `/sealed-vault`; `/slab-vault` permanently redirects there. |
+| TCG Vault | `boosters.js`, `sealed-vault.js` | Update only after inventory owner approval. The public route remains `/sealed-vault`; `/slab-vault` permanently redirects there. Archived graded-card source files are intentionally excluded from the public build. |
 | Fort Knox Vault | `fort-knox-vault.html` | It is a content-wrapped Collectr iframe. `fortknox.js` is unused legacy material; do not treat it as live inventory. |
 
 When adding card photos, commit optimized files under `assets/photos/`; do not introduce base64-encoded images into the data files.
