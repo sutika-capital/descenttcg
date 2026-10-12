@@ -5,13 +5,10 @@
    ============================================================ */
 
 .boss-pikachu-section{
-  padding:44px 0 0;
+  padding:44px 0 52px;
 }
 .boss-pikachu-section .vault-series-banner{
   margin:0 0 20px;
-}
-.boss-pikachu-section + .vault-body-section{
-  padding-top:72px;
 }
 .boss-pikachu-plaque{
   padding-bottom:44px;
@@ -36,7 +33,6 @@
 }
 
 @media (max-width:560px){
-  .boss-pikachu-section{ padding-top:34px; }
+  .boss-pikachu-section{ padding:34px 0 44px; }
   .boss-pikachu-section .vault-series-banner{ margin-bottom:16px; }
-  .boss-pikachu-section + .vault-body-section{ padding-top:54px; }
 }
