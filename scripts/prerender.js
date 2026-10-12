@@ -269,13 +269,20 @@ function itemsForCollection(window) {
 }
 
 function itemsForTcgVault(window) {
-  return evalIn(window, 'typeof TCG_SEALED_ITEMS !== "undefined" ? TCG_SEALED_ITEMS : []', [])
+  const bossPikachu = evalIn(window, 'typeof BOSS_PIKACHU_ITEMS !== "undefined" ? BOSS_PIKACHU_ITEMS : []', [])
+    .map((i) => ({
+      name: i.name,
+      price: i.marketPrice,
+      itemCondition: 'https://schema.org/UsedCondition',
+    }));
+  const sealed = evalIn(window, 'typeof TCG_SEALED_ITEMS !== "undefined" ? TCG_SEALED_ITEMS : []', [])
     .filter((i) => (i.qty || 0) > 0)
     .map((i) => ({
       name: i.name,
       price: i.marketPrice ?? i.trackedValue,
       itemCondition: 'https://schema.org/NewCondition',
     }));
+  return [...bossPikachu, ...sealed];
 }
 
 // fort-knox-vault.html is a third-party Collectr iframe page. Its
@@ -284,8 +291,9 @@ function itemsForTcgVault(window) {
 // prerendered static HTML.
 
 // ------------------------------------------------------------
-// Per-page schema.org itemCondition for offers. The TCG Vault now
-// contains sealed product only.
+// Per-page schema.org itemCondition for offers. The TCG Vault has a
+// dedicated Boss Pikachu collection plus sealed products, so the
+// specific condition is attached at the item level.
 // ------------------------------------------------------------
 const ITEM_CONDITION_BY_PAGE = {
   'lorcana-vault.html': 'https://schema.org/UsedCondition',

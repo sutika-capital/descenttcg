@@ -1,0 +1,42 @@
+/* ============================================================
+   TCG VAULT — TEAM BOSS PIKACHU (JP) COLLECTION
+   A separate collection treatment without restoring the general
+   graded-card presentation.
+   ============================================================ */
+
+.boss-pikachu-section{
+  padding:44px 0 0;
+}
+.boss-pikachu-section .vault-series-banner{
+  margin:0 0 20px;
+}
+.boss-pikachu-section + .vault-body-section{
+  padding-top:72px;
+}
+.boss-pikachu-plaque{
+  padding-bottom:44px;
+  border-color:color-mix(in srgb, var(--vault-gold-br) 52%, var(--vault-line));
+  box-shadow:0 0 0 1px color-mix(in srgb, var(--vault-gold-br) 18%, transparent), 0 14px 30px -20px rgba(0,0,0,0.7);
+}
+.boss-pikachu-plaque-grade{
+  position:absolute;
+  right:16px;
+  bottom:14px;
+  font-family:var(--mono);
+  font-size:0.62rem;
+  font-weight:700;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:var(--vault-ink);
+  background:var(--vault-gold-br);
+  padding:3px 7px;
+  border-radius:4px;
+  line-height:1.2;
+  white-space:nowrap;
+}
+
+@media (max-width:560px){
+  .boss-pikachu-section{ padding-top:34px; }
+  .boss-pikachu-section .vault-series-banner{ margin-bottom:16px; }
+  .boss-pikachu-section + .vault-body-section{ padding-top:54px; }
+}
