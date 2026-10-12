@@ -3759,19 +3759,6 @@ const LORCANA_ITEMS = [
     "collectrMarketPrice": 0
   },
   {
-    "name": "Merida, Formidable Archer",
-    "set": "Wilds Unknown",
-    "rarity": "Iconic",
-    "targetPrice": null,
-    "purchasePrice": 1986,
-    "marketPrice": 1250.15,
-    "owned": true,
-    "grade": "PSA 10.0 GEM - MT",
-    "quantity": 1,
-    "collectrCardNumber": "242/204",
-    "collectrMarketPrice": null
-  },
-  {
     "name": "Peter Pan & Tinker Bell, Fast Friends",
     "set": "Attack of the Vine!",
     "rarity": "Enchanted",
