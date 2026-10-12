@@ -1,5 +1,5 @@
 // ============================================================
-// RIPPING ZACKS — Boosters (boosters.html)
+// DESCENT TCG — Sealed Vault inventory
 // Fully hardcoded — set name, release year, and pricing
 // (targetPrice / purchasePrice / marketPrice) are all maintained
 // directly in this file. All three price fields are optional —

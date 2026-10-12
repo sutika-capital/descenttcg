@@ -3,6 +3,8 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "redirects": [
+    { "source": "/ripping-zacks", "destination": "/", "permanent": true },
+    { "source": "/ripping-zacks.html", "destination": "/", "permanent": true },
     { "source": "/collection.html", "destination": "/lorcana-vault", "permanent": true },
     { "source": "/collection", "destination": "/lorcana-vault", "permanent": true },
     { "source": "/lorcana.html", "destination": "/lorcana-vault", "permanent": true },

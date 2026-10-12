@@ -1,5 +1,5 @@
 // ============================================================
-// RIPPING ZACKS — Pikachu Tracker (marketing.html)
+// DESCENT TCG — Slab Vault inventory
 // Fully hardcoded — name, card number, and pricing (targetPrice /
 // purchasePrice / marketPrice) and ownership status are all
 // maintained directly in this file. All three price fields are

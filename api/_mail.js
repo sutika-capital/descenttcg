@@ -3,7 +3,7 @@
 //
 // Required environment variables (set in the Vercel project):
 //   RESEND_API_KEY  — API key from resend.com
-//   MAIL_FROM       — verified sender, e.g. "Ripping Zacks <forms@descenttcg.com>"
+//   MAIL_FROM       — verified sender, e.g. "Descent TCG <forms@descenttcg.com>"
 //   MAIL_TO         — inbox that receives submissions, e.g. sales@rippingzacks.com
 
 function escapeHtml(value) {
