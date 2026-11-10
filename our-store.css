@@ -1,0 +1,341 @@
+/* Descent Into Gaming store tab. Page-only additions to Descent TCG's purple brand. */
+.store-page { --store-section-space: 86px; }
+.store-page .store-skip {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 12px 18px;
+  background: var(--cobalt-dim);
+  color: var(--paper);
+  border-radius: 8px;
+  transform: translateY(-160%);
+}
+.store-page .store-skip:focus { transform: translateY(0); }
+.store-page main { overflow: clip; }
+.store-page .store-section { padding: var(--store-section-space) 0; }
+.store-page .store-section[id] { scroll-margin-top: 112px; }
+.store-page .store-label {
+  display: block;
+  font: 500 0.7rem/1.5 var(--mono);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--cobalt-dim);
+}
+.store-page .store-label + h2 { margin-top: 14px; }
+.store-page h2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.65rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+.store-page .store-intro {
+  position: relative;
+  padding: 76px 0 62px;
+  background: radial-gradient(ellipse at 78% 38%, rgba(124, 58, 237, 0.15), transparent 49%);
+}
+.store-page .store-intro-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
+  align-items: center;
+  gap: 60px;
+}
+.store-page .store-intro .eyebrow { margin-bottom: 26px; }
+.store-page .store-intro h1 {
+  font-size: clamp(3rem, 5.3vw, 4.85rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+.store-page .store-intro h1 span {
+  display: block;
+  color: var(--cobalt-dim);
+}
+.store-page .store-intro-copy > p {
+  color: var(--ink-dim);
+  max-width: 48ch;
+  margin-top: 24px;
+  font-size: 1.04rem;
+  line-height: 1.75;
+}
+.store-page .store-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+.store-page .store-text-link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--cobalt-dim);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.store-page .store-text-link:hover { color: var(--ink); }
+.store-page .store-intro-copy > .store-text-link { margin-top: 22px; }
+.store-page .store-logo-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+.store-page .store-logo-stage::before {
+  content: "";
+  position: absolute;
+  width: 118%;
+  aspect-ratio: 1;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(153, 102, 237, 0.18), transparent 66%);
+}
+.store-page .store-official-logo {
+  width: min(100%, 338px);
+  height: auto;
+  filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.4));
+}
+.store-page .store-logo-caption {
+  margin-top: 16px;
+  color: var(--ink-faint);
+  font: 0.66rem var(--mono);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.store-page .store-quick-links {
+  border-block: 1px solid var(--line);
+  background: rgba(21, 19, 32, 0.62);
+}
+.store-page .store-quick-links .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-block: 23px;
+}
+.store-page .store-quick-link {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.88rem;
+  color: var(--ink-dim);
+}
+.store-page .store-quick-link svg {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+  stroke: var(--cobalt-dim);
+}
+.store-page .store-quick-link:hover { color: var(--ink); }
+.store-page .store-section-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 48px;
+  margin-bottom: 34px;
+}
+.store-page .store-section-intro > p {
+  max-width: 42ch;
+  color: var(--ink-dim);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+.store-page .store-visit-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+}
+.store-page .store-address-panel,
+.store-page .store-hours-panel {
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+.store-page .store-address-panel {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse at 0% 100%, rgba(124, 58, 237, 0.13), transparent 72%), var(--paper-soft);
+}
+.store-page .store-address-panel h3 { margin-bottom: 18px; font-size: 1.35rem; }
+.store-page .store-address-panel address {
+  font-style: normal;
+  color: var(--ink-dim);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+.store-page .store-address-panel .store-actions { margin-top: 24px; }
+.store-page .store-contact-lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  padding-top: 24px;
+  margin-top: 28px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+}
+.store-page .store-contact-lines a:hover { color: var(--cobalt-dim); }
+.store-page .store-address-footnote {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--ink-faint);
+  font-size: 0.82rem;
+}
+.store-page .store-hours-panel h3 { font-size: 1.15rem; margin-bottom: 16px; }
+.store-page .store-hours { margin: 0; }
+.store-page .store-hours > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 9px 0;
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--line-soft);
+}
+.store-page .store-hours dt { color: var(--ink-dim); }
+.store-page .store-hours dd { margin: 0; color: var(--ink); font-variant-numeric: tabular-nums; }
+.store-page .store-hours-note { margin-top: 17px; color: var(--ink-faint); font-size: 0.77rem; line-height: 1.6; }
+.store-page .store-play-section { border-block: 1px solid var(--line-soft); }
+.store-page .store-events { border-top: 1px solid var(--line); }
+.store-page .store-event {
+  display: grid;
+  grid-template-columns: 125px 1fr 70px;
+  gap: 30px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.store-page .store-event-day { color: var(--cobalt-dim); font: 500 0.78rem var(--mono); }
+.store-page .store-event-time { display: block; margin-top: 9px; color: var(--ink-dim); font-size: 0.9rem; }
+.store-page .store-event h3 { font-size: 1.12rem; margin-bottom: 8px; }
+.store-page .store-event p { color: var(--ink-dim); font-size: 0.88rem; max-width: 73ch; line-height: 1.7; }
+.store-page .store-event-price { color: var(--ink); font: 500 1.2rem var(--mono); text-align: right; }
+.store-page .store-event-price small { display: block; font: 0.7rem var(--body); color: var(--ink-faint); margin-top: 5px; }
+.store-page .store-event-extra {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  padding-top: 30px;
+}
+.store-page .store-event-extra article { padding-left: 18px; border-left: 2px solid var(--line); }
+.store-page .store-event-extra h3 { font-size: 1rem; margin-bottom: 8px; }
+.store-page .store-event-extra p { color: var(--ink-dim); font-size: 0.87rem; line-height: 1.7; }
+.store-page .store-calendar-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  padding-top: 25px;
+  border-top: 1px solid var(--line-soft);
+}
+.store-page .store-calendar-note p { color: var(--ink-faint); font-size: 0.8rem; max-width: 62ch; }
+.store-page .store-calendar-note .store-text-link { flex-shrink: 0; }
+.store-page .store-trade-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  padding: 44px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: radial-gradient(ellipse at 0% 50%, rgba(124, 58, 237, 0.21), transparent 64%), var(--paper-soft);
+}
+.store-page .store-trade-copy > p { color: var(--ink-dim); font-size: 0.93rem; margin-top: 20px; line-height: 1.75; }
+.store-page .store-trade-copy .store-text-link { margin-top: 23px; }
+.store-page .store-trade-rules { margin: 0; }
+.store-page .store-trade-rules > div { padding: 0 0 20px; margin-bottom: 20px; border-bottom: 1px solid var(--line-soft); }
+.store-page .store-trade-rules > div:last-child { margin-bottom: 0; padding-bottom: 0; border: 0; }
+.store-page .store-trade-rules dt { font-weight: 600; font-size: 1.06rem; margin-bottom: 8px; }
+.store-page .store-trade-rules dd { margin: 0; color: var(--ink-dim); font-size: 0.86rem; line-height: 1.7; }
+.store-page .store-shop-section { padding-top: 0; }
+.store-page .store-online {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 44px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line);
+}
+.store-page .store-online-copy { max-width: 67ch; }
+.store-page .store-online-copy h2 { margin-top: 14px; }
+.store-page .store-online-copy > p { color: var(--ink-dim); font-size: 0.94rem; margin-top: 17px; line-height: 1.75; }
+.store-page .store-pickup-note { font-size: 0.82rem !important; color: var(--ink-faint) !important; }
+.store-page .store-online > .btn { flex-shrink: 0; }
+.store-page .store-vault-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+.store-page .store-vault-link {
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-soft);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.store-page .store-vault-link:hover { border-color: var(--cobalt-dim); transform: translateY(-3px); }
+.store-page .store-vault-link h3 { font-size: 1.15rem; }
+.store-page .store-vault-link p { color: var(--ink-dim); font-size: 0.85rem; margin-top: 8px; line-height: 1.65; }
+.store-page .store-vault-link > span { color: var(--cobalt-dim); font-size: 1.4rem; }
+.store-page .store-community-band {
+  padding: 52px 0;
+  border-block: 1px solid var(--line);
+  background: radial-gradient(ellipse at 50% 100%, rgba(124, 58, 237, 0.14), transparent 73%), var(--paper-soft);
+}
+.store-page .store-community-inner { display: flex; justify-content: space-between; align-items: center; gap: 44px; }
+.store-page .store-community-inner h2 { font-size: clamp(1.55rem, 2.6vw, 2rem); }
+.store-page .store-community-inner p { color: var(--ink-dim); font-size: 0.88rem; margin-top: 10px; }
+.store-page .store-community-links { display: flex; flex-wrap: wrap; gap: 14px 24px; margin-top: 18px; font-size: 0.87rem; color: var(--cobalt-dim); }
+.store-page .store-community-links a:hover { color: var(--ink); }
+.store-page .store-community-inner > .btn { flex-shrink: 0; }
+.store-page .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 0.85fr; gap: 35px; }
+.store-page .footer-social { flex-wrap: wrap; }
+
+@media (max-width: 1000px) {
+  .store-page .store-intro-grid { gap: 32px; }
+  .store-page .store-intro h1 { font-size: clamp(3rem, 5.5vw, 4.3rem); }
+  .store-page .store-trade-panel { gap: 32px; padding: 34px; }
+  .store-page .store-online { align-items: start; gap: 28px; }
+  .store-page .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  .store-page { --store-section-space: 62px; }
+  .store-page .store-intro { padding: 50px 0 44px; }
+  .store-page .store-intro-grid { grid-template-columns: 1fr; gap: 38px; }
+  .store-page .store-intro h1 { font-size: clamp(2.65rem, 8vw, 4rem); }
+  .store-page .store-official-logo { width: 208px; }
+  .store-page .store-logo-caption { font-size: 0.6rem; }
+  .store-page .store-quick-links .wrap { flex-wrap: wrap; gap: 16px 24px; padding-block: 20px; }
+  .store-page .store-quick-link { font-size: 0.81rem; }
+  .store-page .store-section-intro { flex-direction: column; align-items: start; gap: 18px; margin-bottom: 28px; }
+  .store-page .store-visit-grid { grid-template-columns: 1fr; gap: 18px; }
+  .store-page .store-address-panel, .store-page .store-hours-panel { padding: 27px; }
+  .store-page .store-event { grid-template-columns: 105px 1fr 52px; gap: 18px; }
+  .store-page .store-calendar-note { flex-direction: column; align-items: start; gap: 17px; }
+  .store-page .store-trade-panel { grid-template-columns: 1fr; gap: 30px; padding: 28px; }
+  .store-page .store-online, .store-page .store-community-inner { flex-direction: column; align-items: start; gap: 26px; }
+  .store-page .store-vault-links { grid-template-columns: 1fr; gap: 16px; }
+  .store-page .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .store-page .wrap { padding-inline: 22px; }
+  .store-page .store-intro .eyebrow { font-size: 0.63rem; }
+  .store-page .store-intro-copy > p { font-size: 0.95rem; }
+  .store-page .store-actions .btn { padding: 13px 19px; font-size: 0.85rem; }
+  .store-page .store-logo-stage { padding-top: 0; }
+  .store-page .store-event { grid-template-columns: 1fr 60px; gap: 13px 16px; padding-block: 25px; }
+  .store-page .store-event-when { grid-column: 1; }
+  .store-page .store-event-day, .store-page .store-event-time { display: inline; font-size: 0.78rem; }
+  .store-page .store-event-time { margin-left: 10px; }
+  .store-page .store-event-copy { grid-column: 1 / -1; grid-row: 2; }
+  .store-page .store-event-price { grid-column: 2; grid-row: 1; font-size: 1rem; }
+  .store-page .store-event-price small { display: inline; margin-left: 4px; }
+  .store-page .store-event-extra { grid-template-columns: 1fr; gap: 25px; }
+  .store-page .store-trade-panel { padding: 26px 22px; }
+  .store-page .store-contact-lines { font-size: 0.82rem; }
+  .store-page .store-vault-link { padding: 24px 22px; }
+  .store-page .footer-grid { grid-template-columns: 1fr; }
+}
