@@ -1,0 +1,148 @@
+/* Descent TCG purple visual patch, adapted for the production site.
+   Inventory, wording, routes, forms and product artwork are unchanged. */
+:root {
+  --paper: #0b0a12;
+  --paper-soft: #151320;
+  --panel: #1d1a29;
+  --line: rgba(169, 139, 247, 0.3);
+  --line-soft: rgba(169, 139, 247, 0.15);
+  --ink: #f0edf8;
+  --ink-dim: #c4bfd2;
+  --ink-faint: #9690a5;
+  --cobalt: #a486f6;
+  --cobalt-dim: #c6b1ff;
+  --citrus: #ded0ff;
+  --mint: #b3a0ff;
+}
+
+.vault-body,
+.sealed-vault-body,
+.tmnt-highlight,
+.jp-specials-highlight {
+  --vault-ink: var(--paper);
+  --vault-panel: var(--paper-soft);
+  --vault-panel-2: var(--panel);
+  --vault-gold: var(--cobalt);
+  --vault-gold-br: var(--cobalt-dim);
+  --vault-glimmer: var(--citrus);
+  --vault-parch: var(--ink);
+  --vault-faint: var(--ink-faint);
+  --vault-line: var(--line);
+}
+
+body { background: var(--paper); }
+::selection { background: var(--cobalt); color: #100d1b; }
+.site-header { background: rgba(11, 10, 18, 0.96); }
+.site-footer { background: var(--paper); }
+.nav-links a:hover,
+.nav-links a.active { color: var(--cobalt-dim); }
+.nav-links a.active::after { background: var(--cobalt); }
+
+/* Existing JS sets these inline on the opened mobile menu. Keep its
+   behavior, but align the drawer with the actual header and palette. */
+@media (max-width: 860px) {
+  .site-header .nav-links[style] {
+    top: 100% !important;
+    background: var(--paper) !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+}
+
+/* Only the homepage receives the supplied realm illustration. */
+.hero { background: var(--paper); }
+.hero-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 45%;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(11, 10, 18, 0.94), rgba(11, 10, 18, 0.78) 35%, rgba(11, 10, 18, 0.2) 64%, transparent 84%),
+    linear-gradient(0deg, var(--paper), transparent 29%);
+}
+.hero-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 77% 37%, rgba(151, 105, 237, 0.32), transparent 41%);
+  mix-blend-mode: screen;
+}
+.hero::after { display: none; }
+.hero .wrap { z-index: 2; }
+.hero .eyebrow,
+.section-head .kicker,
+.stat-num,
+.vault-stat-num { color: var(--cobalt-dim); }
+
+.vault-hero .vault-stats {
+  background: rgba(21, 19, 32, 0.94);
+  border: 1px solid rgba(169, 139, 247, 0.36);
+  border-radius: var(--radius);
+  padding: 26px 20px;
+}
+.collection-body .vault-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 18px;
+}
+.collection-body .vault-stat { min-width: 0; }
+.collection-body .vault-stat-progress-label { max-width: 100%; }
+.vault-stat-progress-bar { background: rgba(169, 139, 247, 0.2); }
+.vault-stat-progress-fill { background: linear-gradient(90deg, #8e70dd, var(--cobalt-dim)); }
+.search-input {
+  background: var(--paper-soft);
+  border-color: rgba(169, 139, 247, 0.34);
+  color: var(--ink);
+}
+.step,
+.value-item,
+.vault-grid .vault-plaque,
+.vault-series-banner { border-color: var(--line); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cobalt), var(--cobalt-dim));
+  color: #100d1b;
+  border-color: var(--cobalt);
+}
+.btn-ghost {
+  border-color: rgba(169, 139, 247, 0.44);
+  color: #e5ddf5;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible { outline-color: var(--cobalt-dim); }
+.form-row :is(input, textarea, select):focus-visible,
+.offer-field :is(input, textarea, select):focus-visible {
+  outline: 2px solid var(--cobalt-dim);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .hero-art img { object-position: 74% 45%; }
+  .hero::before {
+    background:
+      linear-gradient(90deg, rgba(11, 10, 18, 0.92), rgba(11, 10, 18, 0.77)),
+      linear-gradient(0deg, var(--paper), transparent 40%);
+  }
+}
+@media (max-width: 560px) {
+  .vault-hero .vault-stats { padding: 22px 14px; }
+  .collection-body .vault-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 14px;
+  }
+}
