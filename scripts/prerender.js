@@ -6,7 +6,7 @@
 // page's own data + renderer scripts exactly as a browser would —
 // then serializes the fully-rendered DOM back to static HTML.
 //
-// Output: dist/ contains the 3 prerendered vault pages plus
+// Output: dist/ contains the 2 active prerendered vault pages plus
 // verbatim copies of every other site file. The api/ directory
 // is intentionally NOT copied — Vercel builds those serverless
 // functions from the project root independently of the static
@@ -46,6 +46,9 @@ const EXCLUDE_FROM_COPY = new Set([
   // Build-time data export (truncated Collectr dump); no page loads it,
   // so it doesn't belong in dist/.
   'fortknox.js',
+  // Temporarily hidden at the owner's request. Keep the original source
+  // and assets intact; remove this exclusion when restoring the page.
+  'fort-knox-vault.html',
   // Archived graded-card data and presentation are retained in source but
   // intentionally not shipped with the sealed-only public TCG Vault.
   'marketing.js',
@@ -53,7 +56,7 @@ const EXCLUDE_FROM_COPY = new Set([
   'slab-vault.css',
 ]);
 
-const VAULT_PAGES = ['lorcana-vault.html', 'sealed-vault.html', 'fort-knox-vault.html'];
+const VAULT_PAGES = ['lorcana-vault.html', 'sealed-vault.html'];
 
 // ------------------------------------------------------------
 // Static copy of everything that isn't build tooling.

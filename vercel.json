@@ -14,7 +14,9 @@
     { "source": "/marketing.html", "destination": "/sealed-vault", "permanent": true },
     { "source": "/marketing", "destination": "/sealed-vault", "permanent": true },
     { "source": "/slab-vault.html", "destination": "/sealed-vault", "permanent": true },
-    { "source": "/slab-vault", "destination": "/sealed-vault", "permanent": true }
+    { "source": "/slab-vault", "destination": "/sealed-vault", "permanent": true },
+    { "source": "/fort-knox-vault.html", "destination": "/sealed-vault", "permanent": false },
+    { "source": "/fort-knox-vault", "destination": "/sealed-vault", "permanent": false }
   ],
   "headers": [
     {
