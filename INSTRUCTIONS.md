@@ -38,7 +38,7 @@
 
 - Plain HTML, CSS, and browser JavaScript live at the repository root.
 - `npm run build` runs `scripts/prerender.js`.
-- The build copies the static site into `dist/`, prerenders the Lorcana, TCG, and Fort Knox vault pages, and injects product/item-list JSON-LD where appropriate.
+- The build copies the active static site into `dist/`, prerenders the Lorcana and TCG vault pages, and injects product/item-list JSON-LD where appropriate. Fort Knox Vault is temporarily excluded from the public build while its original source is retained.
 - The build deliberately fails when a data issue produces zero inventory items on a prerendered vault page. Treat that failure as a data or renderer problem, not something to bypass.
 - Vercel is configured to run `npm run build` and publish `dist/`. Vercel separately deploys the `api/` directory as serverless functions.
 
@@ -62,9 +62,11 @@ The contact inbox currently remains on the Ripping Zacks Microsoft 365 domain. C
 |---|---|---|
 | Lorcana Vault | `lorcana.js` | Update only after inventory owner approval. `null` prices are intentionally hidden. |
 | TCG Vault | `boss-pikachu.js`, `boosters.js`, `sealed-vault.js` | Update only after inventory owner approval. The public route remains `/sealed-vault`; `/slab-vault` permanently redirects there. The Team Boss Pikachu (JP) collection is public; other archived graded-card source files are intentionally excluded from the public build. |
-| Fort Knox Vault | `fort-knox-vault.html` | It is a content-wrapped Collectr iframe. `fortknox.js` is unused legacy material; do not treat it as live inventory. |
+| Fort Knox Vault (temporarily hidden since 2026-11-09) | `fort-knox-vault.html` | Original page and assets are retained intact. The page is excluded from `dist/`, and its old URLs temporarily redirect to `/sealed-vault`. `fortknox.js` is unused legacy material; do not treat it as live inventory. |
 
 When adding card photos, commit optimized files under `assets/photos/`; do not introduce base64-encoded images into the data files.
+
+To restore Fort Knox Vault, remove its `EXCLUDE_FROM_COPY` entry and add it back to `VAULT_PAGES` in `scripts/prerender.js`; its iframe-specific prerender handler remains available. Remove both temporary Fort Knox redirects from `vercel.json`, then restore its navigation/footer links, store showcase card, sitemap/discovery entries, and applicable privacy/terms embed notices through a reviewed PR. Do not delete the saved page or supporting assets while it is hidden.
 
 ## 3. Access handoff — required follow-up
 
