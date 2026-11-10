@@ -118,20 +118,20 @@ function buildLorcanaRarityBadges(setName) {
 }
 
 const LORCANA_SET_INVENTORY = {
-  "the first chapter": { boosterBoxes: 1, cases: 3 },
-  "rise of the floodborn": { boosterBoxes: 1, cases: 0 },
-  "into the inklands": { boosterBoxes: 1, cases: 0 },
-  "ursula's return": { boosterBoxes: 1, cases: 0 },
-  "shimmering skies": { boosterBoxes: 1, cases: 0 },
-  "azurite sea": { boosterBoxes: 1, cases: 0 },
-  "archazia's island": { boosterBoxes: 1, cases: 0 },
-  "reign of jafar": { boosterBoxes: 1, cases: 0 },
+  "the first chapter": { boosterBoxes: 0, cases: 3 },
+  "rise of the floodborn": { boosterBoxes: 0, cases: 0 },
+  "into the inklands": { boosterBoxes: 0, cases: 0 },
+  "ursula's return": { boosterBoxes: 0, cases: 0 },
+  "shimmering skies": { boosterBoxes: 0, cases: 0 },
+  "azurite sea": { boosterBoxes: 0, cases: 0 },
+  "archazia's island": { boosterBoxes: 0, cases: 0 },
+  "reign of jafar": { boosterBoxes: 0, cases: 0 },
   "fabled": { boosterBoxes: 1, cases: 3 },
-  "whispers in the well": { boosterBoxes: 1, cases: 2 },
-  "winterspell": { boosterBoxes: 1, cases: 3 },
-  "wilds unknown": { boosterBoxes: 1, cases: 2 },
+  "whispers in the well": { boosterBoxes: 0, cases: 2 },
+  "winterspell": { boosterBoxes: 0, cases: 3 },
+  "wilds unknown": { boosterBoxes: 0, cases: 2 },
   "attack of the vine!": { boosterBoxes: 0, cases: 1 },
-  "hyperia city": { boosterBoxes: 3, cases: 2 },
+  "hyperia city": { boosterBoxes: 0, cases: 2 },
   "curator's collection: heroines edition - 2026": { boosterBoxes: 0, cases: 0, promoSets: 2 },
   "d23 collection - 2024": { boosterBoxes: 0, cases: 0, promoSets: 3 },
   "d23 collection - 2026": { boosterBoxes: 0, cases: 0, promoSets: 3 },
@@ -500,9 +500,21 @@ const LORCANA_PERMANENT_PHOTOS = {
   "mickey mouse, brave little tailor (serial numbered)": "assets/lorcana/mickey-mouse-brave-little-tailor.webp",
   "the headless horseman, cursed rider": "assets/photos/lorcana/collectr-the-headless-horseman-cursed-rider.webp",
   "tinker bell, insistent fairy": "assets/photos/lorcana/collectr-tinker-bell-insistent-fairy.webp",
+  "angel, siren singer": "assets/photos/lorcana/collectr-angel-siren-singer-d23-2026.webp",
+  "pocahontas, following the wind": "assets/photos/lorcana/collectr-pocahontas-following-the-wind-d23-2026.webp",
+  "mushu, stealthy dragon": "assets/photos/lorcana/collectr-mushu-stealthy-dragon-d23-2026.webp",
+  "hector rivera, gone to pieces": "assets/photos/lorcana/collectr-hector-rivera-gone-to-pieces-d23-2026.webp",
+  "judy hopps, uncovering clues": "assets/photos/lorcana/collectr-judy-hopps-uncovering-clues-d23-2026.webp",
+  "mr. incredible, taking out the trash": "assets/photos/lorcana/collectr-mr-incredible-taking-out-the-trash-d23-2026.webp",
+  "rapunzel, appreciative artist": "assets/photos/lorcana/collectr-rapunzel-appreciative-artist-dis.webp",
+  "donald duck, pie slinger (disney parks promo)": "assets/photos/lorcana/collectr-donald-duck-pie-slinger-dis.webp",
+  "stitch, rock star (disney parks promo)": "assets/photos/lorcana/collectr-stitch-rock-star-dis.webp",
+  "cinderella, stouthearted (challenge promo)": "assets/photos/lorcana/collectr-cinderella-stouthearted-challenge.webp",
+  "elsa, ice maker (224/204)": "assets/photos/lorcana/collectr-elsa-ice-maker-224.webp",
+  "stand out (foil)": "assets/photos/lorcana/collectr-stand-out-foil-11.webp",
 };
 
-// Collectr-synchronized inventory — imported from the owner's Lorcana Vault CSV on 2026-10-21.
+// Collectr-synchronized inventory — imported from the owner's Lorcana Vault CSV on 2026-11-10.
 // `owned: true` represents the current physical card inventory; repeated entries preserve
 // Collectr quantities. A non-zero Collectr Price Override becomes the displayed portfolio
 // value; the original market quote remains in `collectrMarketPrice`.
@@ -513,12 +525,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 2500.0,
-    "marketPrice": 2755.16,
+    "marketPrice": 3001.18,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "207/204",
-    "collectrMarketPrice": 2755.16
+    "collectrMarketPrice": 3001.18
   },
   {
     "name": "Mickey Mouse, Wayward Sorcerer",
@@ -526,12 +538,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 1200.0,
-    "marketPrice": 1403.72,
+    "marketPrice": 1705.1,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "208/204",
-    "collectrMarketPrice": 1403.72
+    "collectrMarketPrice": 1705.1
   },
   {
     "name": "Stitch, Carefree Surfer",
@@ -539,12 +551,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 1000.0,
-    "marketPrice": 957.18,
+    "marketPrice": 744.24,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "206/204",
-    "collectrMarketPrice": 957.18
+    "collectrMarketPrice": 744.24
   },
   {
     "name": "Simba, Returned King",
@@ -574,12 +586,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 675.0,
-    "marketPrice": 873.01,
+    "marketPrice": 1207.29,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "213/204",
-    "collectrMarketPrice": 873.01
+    "collectrMarketPrice": 1207.29
   },
   {
     "name": "Tinker Bell, Giant Fairy",
@@ -609,12 +621,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 1350.0,
-    "marketPrice": 1320.13,
+    "marketPrice": 1274.83,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "209/204",
-    "collectrMarketPrice": 1320.13
+    "collectrMarketPrice": 1274.83
   },
   {
     "name": "Aladdin, Heroic Outlaw",
@@ -640,12 +652,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 500.0,
-    "marketPrice": 520.16,
+    "marketPrice": 520.08,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "205/204",
-    "collectrMarketPrice": 520.16
+    "collectrMarketPrice": 520.08
   },
   {
     "name": "Discard Card (Black Background)",
@@ -662,10 +674,13 @@ const LORCANA_ITEMS = [
     "set": "The First Chapter",
     "rarity": "Rare",
     "targetPrice": null,
-    "purchasePrice": 31.01,
-    "marketPrice": 35,
-    "owned": false,
-    "grade": "PSA 10.0 GEM - MT"
+    "purchasePrice": 31.0,
+    "marketPrice": 35.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "158/204",
+    "collectrMarketPrice": null
   },
   {
     "name": "Cinderella, Ballroom Sensation",
@@ -673,12 +688,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 770.0,
-    "marketPrice": 730.54,
+    "marketPrice": 689.38,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "205/204",
-    "collectrMarketPrice": 730.54
+    "collectrMarketPrice": 689.38
   },
   {
     "name": "Alice, Growing Girl",
@@ -686,12 +701,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 600.0,
-    "marketPrice": 581.26,
+    "marketPrice": 447.46,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "213/204",
-    "collectrMarketPrice": 581.26
+    "collectrMarketPrice": 447.46
   },
   {
     "name": "Snow White, Well Wisher",
@@ -699,12 +714,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 600.0,
-    "marketPrice": 593.51,
+    "marketPrice": 536.6,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "206/204",
-    "collectrMarketPrice": 593.51
+    "collectrMarketPrice": 536.6
   },
   {
     "name": "Beast, Relentless",
@@ -774,12 +789,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 198.0,
-    "marketPrice": 123.22,
+    "marketPrice": 187.47,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "208/204",
-    "collectrMarketPrice": 123.22
+    "collectrMarketPrice": 187.47
   },
   {
     "name": "Namaari, Morning Mist",
@@ -853,12 +868,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 100.0,
-    "marketPrice": 169.63,
+    "marketPrice": 158.14,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "217/204",
-    "collectrMarketPrice": 169.63
+    "collectrMarketPrice": 158.14
   },
   {
     "name": "Pride Lands, Pride Rock",
@@ -910,12 +925,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 750.0,
-    "marketPrice": 1511.36,
+    "marketPrice": 1300.68,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "220/204",
-    "collectrMarketPrice": 1511.36
+    "collectrMarketPrice": 1300.68
   },
   {
     "name": "Scrooge McDuck, Richest Duck in the World",
@@ -990,12 +1005,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 325.0,
-    "marketPrice": 286.75,
+    "marketPrice": 257.11,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "214/204",
-    "collectrMarketPrice": 286.75
+    "collectrMarketPrice": 257.11
   },
   {
     "name": "Ariel, Sonic Warrior",
@@ -1234,12 +1249,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 224.11,
-    "marketPrice": 151.39,
+    "marketPrice": 157.78,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "218/204",
-    "collectrMarketPrice": 151.39
+    "collectrMarketPrice": 157.78
   },
   {
     "name": "Revive (song)",
@@ -1336,12 +1351,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 350.0,
-    "marketPrice": 342.92,
+    "marketPrice": 301.06,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "221/204",
-    "collectrMarketPrice": 342.92
+    "collectrMarketPrice": 301.06
   },
   {
     "name": "Archimedes, Electrified Owl",
@@ -1358,12 +1373,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 300.0,
-    "marketPrice": 253.82,
+    "marketPrice": 263.85,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "219/204",
-    "collectrMarketPrice": 253.82
+    "collectrMarketPrice": 263.85
   },
   {
     "name": "You Came Back (song)",
@@ -1371,12 +1386,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 375.0,
-    "marketPrice": 558.35,
+    "marketPrice": 530.56,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "213/204",
-    "collectrMarketPrice": 558.35
+    "collectrMarketPrice": 530.56
   },
   {
     "name": "Tiana, Restaurant Owner",
@@ -1384,12 +1399,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 450.0,
-    "marketPrice": 337.01,
+    "marketPrice": 277.24,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "206/204",
-    "collectrMarketPrice": 337.01
+    "collectrMarketPrice": 277.24
   },
   {
     "name": "Tigger, In the Crow's Nest",
@@ -1397,12 +1412,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 700.0,
-    "marketPrice": 754.83,
+    "marketPrice": 679.05,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "215/204",
-    "collectrMarketPrice": 754.83
+    "collectrMarketPrice": 679.05
   },
   {
     "name": "Wreck-It Ralph, Ham Hands",
@@ -1436,12 +1451,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 749.0,
-    "marketPrice": 686.18,
+    "marketPrice": 576.09,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "218/204",
-    "collectrMarketPrice": 686.18
+    "collectrMarketPrice": 576.09
   },
   {
     "name": "The Islands I Pulled From The Sea (song)",
@@ -1502,12 +1517,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 450.0,
-    "marketPrice": 479.47,
+    "marketPrice": 372.58,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "205/204",
-    "collectrMarketPrice": 479.47
+    "collectrMarketPrice": 372.58
   },
   {
     "name": "Rafiki, Ethereal Guide",
@@ -1581,9 +1596,13 @@ const LORCANA_ITEMS = [
     "set": "Archazia's Island",
     "rarity": "Enchanted",
     "targetPrice": null,
-    "purchasePrice": null,
-    "marketPrice": null,
-    "owned": false
+    "purchasePrice": 2018.0,
+    "marketPrice": 2200.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "205/204",
+    "collectrMarketPrice": 490.0
   },
   {
     "name": "Mickey Mouse, Inspirational Warrior",
@@ -1767,12 +1786,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 3500.0,
-    "marketPrice": 3141.51,
+    "marketPrice": 2336.72,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "220/204",
-    "collectrMarketPrice": 3141.51
+    "collectrMarketPrice": 2336.72
   },
   {
     "name": "Fantastical and Magical (song)",
@@ -1956,25 +1975,25 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 1720.0,
-    "marketPrice": 1848.01,
+    "marketPrice": 1664.57,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "213/204",
-    "collectrMarketPrice": 1848.01
+    "collectrMarketPrice": 1664.57
   },
   {
     "name": "Mickey Mouse, Brave Little Prince",
     "set": "Fabled",
     "rarity": "Iconic",
     "targetPrice": 13200,
-    "purchasePrice": 14183.0,
-    "marketPrice": 12464.0,
+    "purchasePrice": 12491.5,
+    "marketPrice": 12098.1,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "242/204",
-    "collectrMarketPrice": 12464.0
+    "collectrMarketPrice": 12098.1
   },
   {
     "name": "Minnie Mouse, Sweetheart Princess",
@@ -1982,12 +2001,12 @@ const LORCANA_ITEMS = [
     "rarity": "Iconic",
     "targetPrice": null,
     "purchasePrice": 6250.0,
-    "marketPrice": 5671.53,
+    "marketPrice": 5517.62,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "241/204",
-    "collectrMarketPrice": 5671.53
+    "collectrMarketPrice": 5517.62
   },
   {
     "name": "Winnie the Pooh, Hunny Wizard",
@@ -2030,12 +2049,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 695.5,
-    "marketPrice": 574.79,
+    "marketPrice": 508.22,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "238/204",
-    "collectrMarketPrice": 574.79
+    "collectrMarketPrice": 508.22
   },
   {
     "name": "Scar, Finally King",
@@ -2043,12 +2062,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 1000.0,
-    "marketPrice": 1186.64,
+    "marketPrice": 995.86,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "239/204",
-    "collectrMarketPrice": 1186.64
+    "collectrMarketPrice": 995.86
   },
   {
     "name": "Pongo, Determined Father",
@@ -2065,12 +2084,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 836.0,
-    "marketPrice": 626.74,
+    "marketPrice": 540.2,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "235/204",
-    "collectrMarketPrice": 626.74
+    "collectrMarketPrice": 540.2
   },
   {
     "name": "Mickey Mouse, Steamboat Pilot",
@@ -2078,12 +2097,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 2100.0,
-    "marketPrice": 2325.48,
+    "marketPrice": 1915.61,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "231/204",
-    "collectrMarketPrice": 2325.48
+    "collectrMarketPrice": 1915.61
   },
   {
     "name": "Max Goof, Chart Topper",
@@ -2091,22 +2110,25 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 1191.0,
-    "marketPrice": 671.7,
+    "marketPrice": 691.09,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "230/204",
-    "collectrMarketPrice": 671.7
+    "collectrMarketPrice": 691.09
   },
   {
     "name": "Max Goof, Rockin' Teen",
     "set": "Fabled",
     "rarity": "Epic",
     "targetPrice": null,
-    "purchasePrice": 100,
-    "marketPrice": 125,
-    "owned": false,
-    "grade": "PSA 10.0 GEM - MT"
+    "purchasePrice": 125.0,
+    "marketPrice": 125.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "214/204",
+    "collectrMarketPrice": null
   },
   {
     "name": "Jasmine, Fearless Princess",
@@ -2123,12 +2145,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 1200.0,
-    "marketPrice": 1053.82,
+    "marketPrice": 833.67,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "234/204",
-    "collectrMarketPrice": 1053.82
+    "collectrMarketPrice": 833.67
   },
   {
     "name": "Hades, Infernal Schemer",
@@ -2158,12 +2180,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 1250.0,
-    "marketPrice": 1480.32,
+    "marketPrice": 1107.24,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "228/204",
-    "collectrMarketPrice": 1480.32
+    "collectrMarketPrice": 1107.24
   },
   {
     "name": "Cruella De Vil, Style Icon",
@@ -2171,12 +2193,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 802.5,
-    "marketPrice": 633.82,
+    "marketPrice": 574.86,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "236/204",
-    "collectrMarketPrice": 633.82
+    "collectrMarketPrice": 574.86
   },
   {
     "name": "Belle, Accomplished Mystic",
@@ -2193,12 +2215,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 942.0,
-    "marketPrice": 533.25,
+    "marketPrice": 453.06,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "224/204",
-    "collectrMarketPrice": 533.25
+    "collectrMarketPrice": 453.06
   },
   {
     "name": "Ariel, Adventurous Collector",
@@ -2206,12 +2228,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 4000.0,
-    "marketPrice": 2230.34,
+    "marketPrice": 1857.95,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "232/204",
-    "collectrMarketPrice": 2230.34
+    "collectrMarketPrice": 1857.95
   },
   {
     "name": "Ariel, Ethereal Voice",
@@ -2219,12 +2241,12 @@ const LORCANA_ITEMS = [
     "rarity": "Iconic",
     "targetPrice": null,
     "purchasePrice": 3163.0,
-    "marketPrice": 2787.19,
+    "marketPrice": 2448.83,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "241/204",
-    "collectrMarketPrice": 2787.19
+    "collectrMarketPrice": 2448.83
   },
   {
     "name": "Hades, Looking for a Deal",
@@ -2232,12 +2254,12 @@ const LORCANA_ITEMS = [
     "rarity": "Iconic",
     "targetPrice": null,
     "purchasePrice": 2735.0,
-    "marketPrice": 1574.16,
+    "marketPrice": 1525.17,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "242/204",
-    "collectrMarketPrice": 1574.16
+    "collectrMarketPrice": 1525.17
   },
   {
     "name": "Spooky Sight (song)",
@@ -2333,12 +2355,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 2500.0,
-    "marketPrice": 960.82,
+    "marketPrice": 866.83,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "236/204",
-    "collectrMarketPrice": 960.82
+    "collectrMarketPrice": 866.83
   },
   {
     "name": "Nick Wilde, Persistent Investigator",
@@ -2469,12 +2491,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 2000.0,
-    "marketPrice": 1952.55,
+    "marketPrice": 1715.21,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "233/204",
-    "collectrMarketPrice": 1952.55
+    "collectrMarketPrice": 1715.21
   },
   {
     "name": "Ohana Means Family (song)",
@@ -2491,12 +2513,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 1000.0,
-    "marketPrice": 839.38,
+    "marketPrice": 726.03,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "226/204",
-    "collectrMarketPrice": 839.38
+    "collectrMarketPrice": 726.03
   },
   {
     "name": "Freeze the Vine (song)",
@@ -2592,7 +2614,7 @@ const LORCANA_ITEMS = [
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "232/204",
-    "collectrMarketPrice": 294.17
+    "collectrMarketPrice": 308.85
   },
   {
     "name": "The Cold Never Bothered Me (song)",
@@ -2605,7 +2627,7 @@ const LORCANA_ITEMS = [
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "234/204",
-    "collectrMarketPrice": 764.78
+    "collectrMarketPrice": 693.46
   },
   {
     "name": "Scrooge McDuck, Reformed Ebenezer",
@@ -2626,12 +2648,12 @@ const LORCANA_ITEMS = [
     "rarity": "Enchanted",
     "targetPrice": null,
     "purchasePrice": 500.0,
-    "marketPrice": 561.48,
+    "marketPrice": 439.47,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "236/204",
-    "collectrMarketPrice": 561.48
+    "collectrMarketPrice": 439.47
   },
   {
     "name": "Tamatoa, Seeker of Shine",
@@ -2683,25 +2705,25 @@ const LORCANA_ITEMS = [
     "rarity": "Iconic",
     "targetPrice": null,
     "purchasePrice": 3500.0,
-    "marketPrice": 3299.57,
+    "marketPrice": 2791.8,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "241/204",
-    "collectrMarketPrice": 3299.57
+    "collectrMarketPrice": 2791.8
   },
   {
     "name": "Merida, Formidable Archer",
     "set": "Wilds Unknown",
     "rarity": "Iconic",
     "targetPrice": null,
-    "purchasePrice": 1986.0,
-    "marketPrice": 1245.25,
+    "purchasePrice": 1200.0,
+    "marketPrice": 1619.0,
     "owned": true,
-    "grade": "PSA 10.0 GEM - MT",
+    "grade": "BGS 10.0 Pristine",
     "quantity": 1,
     "collectrCardNumber": "242/204",
-    "collectrMarketPrice": 1245.25
+    "collectrMarketPrice": 1619.0
   },
   {
     "name": "You've Got a Friend in Me (song)",
@@ -2714,7 +2736,7 @@ const LORCANA_ITEMS = [
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "225/204",
-    "collectrMarketPrice": 1127.07
+    "collectrMarketPrice": 818.08
   },
   {
     "name": "What Else Can I Do? (song)",
@@ -2896,7 +2918,7 @@ const LORCANA_ITEMS = [
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "244/207",
-    "collectrMarketPrice": 1954.59
+    "collectrMarketPrice": 1687.25
   },
   {
     "name": "Belle & Beast, Certain as the Sun",
@@ -2909,7 +2931,7 @@ const LORCANA_ITEMS = [
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "245/207",
-    "collectrMarketPrice": 2338.04
+    "collectrMarketPrice": 2206.41
   },
   {
     "name": "Mike Wazowski, Heroic Climber",
@@ -2948,7 +2970,7 @@ const LORCANA_ITEMS = [
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "228/207",
-    "collectrMarketPrice": null
+    "collectrMarketPrice": 895.94
   },
   {
     "name": "Sulley & Boo, Scare Buddies",
@@ -3026,7 +3048,7 @@ const LORCANA_ITEMS = [
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "234/207",
-    "collectrMarketPrice": null
+    "collectrMarketPrice": 1177.38
   },
   {
     "name": "Maleficent & Diablo, Evil Incarnate",
@@ -3151,12 +3173,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": null,
-    "marketPrice": 8872.68,
+    "marketPrice": 9409.5,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "1",
-    "collectrMarketPrice": 8872.68
+    "collectrMarketPrice": 9409.5
   },
   {
     "name": "Stitch, Rock Star",
@@ -3260,12 +3282,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 132.0,
-    "marketPrice": 163.57,
+    "marketPrice": 107.93,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "20",
-    "collectrMarketPrice": 163.57
+    "collectrMarketPrice": 107.93
   },
   {
     "name": "Stitch (Disney100)",
@@ -3295,12 +3317,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 700.0,
-    "marketPrice": 530.61,
+    "marketPrice": 489.93,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "23",
-    "collectrMarketPrice": 530.61
+    "collectrMarketPrice": 489.93
   },
   {
     "name": "Mickey Mouse, Playful Sorcerer",
@@ -3308,12 +3330,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 1000.0,
-    "marketPrice": 1522.23,
+    "marketPrice": 1581.64,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "7",
-    "collectrMarketPrice": 1522.23
+    "collectrMarketPrice": 1581.64
   },
   {
     "name": "Mickey Mouse, Brave Little Tailor (Extended Art)",
@@ -3321,19 +3343,19 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 776.65,
-    "marketPrice": 738.74,
+    "marketPrice": 629.14,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "1",
-    "collectrMarketPrice": 738.74
+    "collectrMarketPrice": 629.14
   },
   {
-    "name": "Cinderella, Stouthearted",
-    "set": "D23 Collection - 2024",
+    "name": "Cinderella, Stouthearted (Challenge Promo)",
+    "set": "Disney Lorcana Promo Cards",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": 5000.0,
+    "purchasePrice": 4191.5,
     "marketPrice": 3663.43,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
@@ -3347,12 +3369,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 172.29,
-    "marketPrice": 80.98,
+    "marketPrice": 69.41,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "3",
-    "collectrMarketPrice": 80.98
+    "collectrMarketPrice": 69.41
   },
   {
     "name": "Bruno Madrigal, Undetected Uncle",
@@ -3360,12 +3382,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 193.0,
-    "marketPrice": 92.61,
+    "marketPrice": 59.22,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "4",
-    "collectrMarketPrice": 92.61
+    "collectrMarketPrice": 59.22
   },
   {
     "name": "Vanellope von Schweetz, Sugar Rush Princess (D23)",
@@ -3373,25 +3395,25 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 213.17,
-    "marketPrice": 99.7,
+    "marketPrice": 90.21,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "5",
-    "collectrMarketPrice": 99.7
+    "collectrMarketPrice": 90.21
   },
   {
     "name": "Oswald, The Lucky Rabbit",
     "set": "D23 Collection - 2024",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": 294.84,
-    "marketPrice": 250.64,
+    "purchasePrice": 297.42,
+    "marketPrice": 206.57,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "6",
-    "collectrMarketPrice": 250.64
+    "collectrMarketPrice": 206.57
   },
   {
     "name": "Mickey Mouse, Pirate Captain",
@@ -3399,12 +3421,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 1200.0,
-    "marketPrice": 1997.62,
+    "marketPrice": 1488.38,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "13",
-    "collectrMarketPrice": 1997.62
+    "collectrMarketPrice": 1488.38
   },
   {
     "name": "Mickey Mouse, Warm Welcome",
@@ -3538,54 +3560,78 @@ const LORCANA_ITEMS = [
     "set": "D23 Collection - 2026",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": null,
-    "marketPrice": null,
-    "owned": false
+    "purchasePrice": 232.0,
+    "marketPrice": 300.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "10",
+    "collectrMarketPrice": null
   },
   {
     "name": "Pocahontas, Following the Wind",
     "set": "D23 Collection - 2026",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": null,
-    "marketPrice": null,
-    "owned": false
+    "purchasePrice": 236.0,
+    "marketPrice": 300.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "11",
+    "collectrMarketPrice": null
   },
   {
     "name": "Mushu, Stealthy Dragon",
     "set": "D23 Collection - 2026",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": null,
-    "marketPrice": null,
-    "owned": false
+    "purchasePrice": 250.0,
+    "marketPrice": 300.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "12",
+    "collectrMarketPrice": null
   },
   {
     "name": "Hector Rivera, Gone to Pieces",
     "set": "D23 Collection - 2026",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": null,
-    "marketPrice": null,
-    "owned": false
+    "purchasePrice": 278.0,
+    "marketPrice": 300.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "13",
+    "collectrMarketPrice": null
   },
   {
     "name": "Judy Hopps, Uncovering Clues",
     "set": "D23 Collection - 2026",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": null,
-    "marketPrice": null,
-    "owned": false
+    "purchasePrice": 277.0,
+    "marketPrice": 300.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "14",
+    "collectrMarketPrice": null
   },
   {
     "name": "Mr. Incredible, Taking Out the Trash",
     "set": "D23 Collection - 2026",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": null,
-    "marketPrice": null,
-    "owned": false
+    "purchasePrice": 277.0,
+    "marketPrice": 300.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "15",
+    "collectrMarketPrice": null
   },
   {
     "name": "Stitch, Rock Star (2024)",
@@ -3687,7 +3733,7 @@ const LORCANA_ITEMS = [
     "owned": true,
     "quantity": 1,
     "collectrCardNumber": "9",
-    "collectrMarketPrice": 290.54
+    "collectrMarketPrice": 222.43
   },
   {
     "name": "Rapunzel, Gifted with Healing",
@@ -3747,12 +3793,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 5500.0,
-    "marketPrice": 5364.01,
+    "marketPrice": 2986.39,
     "grade": "PSA 10.0 GEM - MT",
     "owned": true,
     "quantity": 1,
     "collectrCardNumber": "2",
-    "collectrMarketPrice": 5364.01
+    "collectrMarketPrice": 2986.39
   },
   {
     "name": "Invited to the Ball",
@@ -3760,12 +3806,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 6250.0,
-    "marketPrice": 4250.0,
+    "marketPrice": 6988.1,
     "grade": "PSA 10.0 GEM - MT",
     "owned": true,
     "quantity": 1,
     "collectrCardNumber": "6",
-    "collectrMarketPrice": 4250.0
+    "collectrMarketPrice": 6988.1
   },
   {
     "name": "Mickey Mouse, Steamboat Pilot",
@@ -3816,12 +3862,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 509.0,
-    "marketPrice": 613.69,
+    "marketPrice": 576.22,
     "grade": "PSA 10.0 GEM - MT",
     "owned": true,
     "quantity": 1,
     "collectrCardNumber": "18",
-    "collectrMarketPrice": 613.69
+    "collectrMarketPrice": 576.22
   },
   {
     "name": "Mickey Mouse, Musketeer",
@@ -3829,12 +3875,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 400.0,
-    "marketPrice": 479.87,
+    "marketPrice": 465.65,
     "grade": "PSA 10.0 GEM - MT",
     "owned": true,
     "quantity": 1,
     "collectrCardNumber": "11",
-    "collectrMarketPrice": 479.87
+    "collectrMarketPrice": 465.65
   },
   {
     "name": "Pegasus, Gift for Hercules",
@@ -3855,12 +3901,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 350.0,
-    "marketPrice": 349.71,
+    "marketPrice": 310.3,
     "grade": "PSA 10.0 GEM - MT",
     "owned": true,
     "quantity": 1,
     "collectrCardNumber": "13",
-    "collectrMarketPrice": 349.71
+    "collectrMarketPrice": 310.3
   },
   {
     "name": "Mickey Mouse, Pirate Captain",
@@ -3904,12 +3950,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 348.0,
-    "marketPrice": 254.48,
+    "marketPrice": 182.41,
     "grade": "PSA 10.0 GEM - MT",
     "owned": true,
     "quantity": 1,
     "collectrCardNumber": "19",
-    "collectrMarketPrice": 254.48
+    "collectrMarketPrice": 182.41
   },
   {
     "name": "Mickey Mouse, Brave Little Prince",
@@ -3930,12 +3976,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 200.0,
-    "marketPrice": 206.52,
+    "marketPrice": 163.18,
     "grade": "PSA 10.0 GEM - MT",
     "owned": true,
     "quantity": 1,
     "collectrCardNumber": "21",
-    "collectrMarketPrice": 206.52
+    "collectrMarketPrice": 163.18
   },
   {
     "name": "Cinderella, Stouthearted",
@@ -3943,12 +3989,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 273.94,
-    "marketPrice": 212.59,
+    "marketPrice": 126.1,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "2",
-    "collectrMarketPrice": 212.59
+    "collectrMarketPrice": 126.1
   },
   {
     "name": "Mickey Mouse, Musketeer Captain",
@@ -3968,10 +4014,13 @@ const LORCANA_ITEMS = [
     "set": "Attack of the Vine!",
     "rarity": "Enchanted",
     "targetPrice": null,
-    "purchasePrice": 8000,
-    "marketPrice": null,
-    "owned": false,
-    "grade": "PSA 10.0 GEM - MT"
+    "purchasePrice": 2500.0,
+    "marketPrice": 2999.0,
+    "owned": true,
+    "grade": "BGS 10.0 Pristine",
+    "quantity": 1,
+    "collectrCardNumber": "234/207",
+    "collectrMarketPrice": 2999.0
   },
   {
     "name": "Mulan, Charging Ahead",
@@ -3991,7 +4040,7 @@ const LORCANA_ITEMS = [
     "set": "Archazia's Island",
     "rarity": "Enchanted",
     "targetPrice": null,
-    "purchasePrice": 3000.0,
+    "purchasePrice": 2265.5,
     "marketPrice": 3000.0,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
@@ -4018,12 +4067,12 @@ const LORCANA_ITEMS = [
     "rarity": "Promo",
     "targetPrice": null,
     "purchasePrice": 273.91,
-    "marketPrice": 210.1,
+    "marketPrice": 194.1,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "1",
-    "collectrMarketPrice": 210.1
+    "collectrMarketPrice": 194.1
   },
   {
     "name": "Elsa, Ice Maker",
@@ -4056,7 +4105,7 @@ const LORCANA_ITEMS = [
     "set": "Disney Lorcana Promo Cards",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": 80000.0,
+    "purchasePrice": 72616.6667,
     "marketPrice": 100000.0,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
@@ -4069,7 +4118,7 @@ const LORCANA_ITEMS = [
     "set": "Disney Lorcana Promo Cards",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": 9000.0,
+    "purchasePrice": 9500.0,
     "marketPrice": 11000.0,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
@@ -4082,12 +4131,282 @@ const LORCANA_ITEMS = [
     "set": "Disney Lorcana Promo Cards",
     "rarity": "Promo",
     "targetPrice": null,
-    "purchasePrice": 19000.0,
+    "purchasePrice": 19750.0,
     "marketPrice": 35000.0,
     "owned": true,
     "grade": "PSA 10.0 GEM - MT",
     "quantity": 1,
     "collectrCardNumber": "18",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Spooky Sight (song)",
+    "set": "Whispers in the Well",
+    "rarity": "Enchanted",
+    "targetPrice": null,
+    "purchasePrice": 2000,
+    "marketPrice": 2122,
+    "owned": false,
+    "grade": "PSA 10.0 GEM - MT"
+  },
+  {
+    "name": "Hiro Hamada, Armor Designer",
+    "set": "Archazia's Island",
+    "rarity": "Enchanted",
+    "targetPrice": null,
+    "purchasePrice": 2265.5,
+    "marketPrice": 3000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "214/204",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Peter Pan & Tinker Bell, Fast Friends",
+    "set": "Attack of the Vine!",
+    "rarity": "Enchanted",
+    "targetPrice": null,
+    "purchasePrice": 1400.0,
+    "marketPrice": 1200.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "233/207",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Oswald, The Lucky Rabbit",
+    "set": "D23 Collection - 2024",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 297.42,
+    "marketPrice": 206.57,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "6",
+    "collectrMarketPrice": 206.57
+  },
+  {
+    "name": "Cinderella, Stouthearted (Challenge Promo)",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 4191.5,
+    "marketPrice": 3663.43,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "3",
+    "collectrMarketPrice": 3663.43
+  },
+  {
+    "name": "Donald Duck, Pie Slinger (Disney Parks Promo)",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 540.0,
+    "marketPrice": 550.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "2",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Mickey Mouse, Brave Little Tailor (Serial Numbered)",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 72616.6667,
+    "marketPrice": 100000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "5",
+    "collectrMarketPrice": 39100.0
+  },
+  {
+    "name": "Mickey Mouse, Brave Little Tailor (Serial Numbered)",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 72616.6667,
+    "marketPrice": 100000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "5",
+    "collectrMarketPrice": 39100.0
+  },
+  {
+    "name": "Mickey Mouse, Brave Little Tailor (Serial Numbered)",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 72616.6667,
+    "marketPrice": 100000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "5",
+    "collectrMarketPrice": 39100.0
+  },
+  {
+    "name": "Mickey Mouse, Brave Little Tailor (Serial Numbered)",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 72616.6667,
+    "marketPrice": 100000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "5",
+    "collectrMarketPrice": 39100.0
+  },
+  {
+    "name": "Mickey Mouse, Brave Little Tailor (Serial Numbered)",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 72616.6667,
+    "marketPrice": 100000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "5",
+    "collectrMarketPrice": 39100.0
+  },
+  {
+    "name": "Rapunzel, Appreciative Artist",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Rare",
+    "targetPrice": null,
+    "purchasePrice": 540.0,
+    "marketPrice": 550.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "1",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Stand Out (Foil)",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 3002.41,
+    "marketPrice": 5000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "11",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Stitch, Rock Star (Disney Parks Promo)",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 540.0,
+    "marketPrice": 550.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "3",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "The Headless Horseman, Cursed Rider",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 9500.0,
+    "marketPrice": 11000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "17",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Tinker Bell, Insistent Fairy",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 19750.0,
+    "marketPrice": 35000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "18",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Tinker Bell, Insistent Fairy",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 19750.0,
+    "marketPrice": 35000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "18",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Tinker Bell, Insistent Fairy",
+    "set": "Disney Lorcana Promo Cards",
+    "rarity": "Promo",
+    "targetPrice": null,
+    "purchasePrice": 19750.0,
+    "marketPrice": 35000.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "18",
+    "collectrMarketPrice": null
+  },
+  {
+    "name": "Mickey Mouse, Brave Little Prince",
+    "set": "Fabled",
+    "rarity": "Iconic",
+    "targetPrice": 13200,
+    "purchasePrice": 12491.5,
+    "marketPrice": 12098.1,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "242/204",
+    "collectrMarketPrice": 12098.1
+  },
+  {
+    "name": "Mickey Mouse, Steamboat Pilot",
+    "set": "Fabled",
+    "rarity": "Enchanted",
+    "targetPrice": null,
+    "purchasePrice": 2100.0,
+    "marketPrice": 1915.61,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "231/204",
+    "collectrMarketPrice": 1915.61
+  },
+  {
+    "name": "Elsa, Ice Maker (224/204)",
+    "set": "Illumineer's Quest: Palace Heist",
+    "rarity": "Super Rare",
+    "targetPrice": null,
+    "purchasePrice": 455.0,
+    "marketPrice": 500.0,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "224/204",
     "collectrMarketPrice": null
   },
   {
@@ -4102,6 +4421,19 @@ const LORCANA_ITEMS = [
     "quantity": 1,
     "collectrCardNumber": "237/204",
     "collectrMarketPrice": 2122.0
+  },
+  {
+    "name": "Merida, Formidable Archer",
+    "set": "Wilds Unknown",
+    "rarity": "Iconic",
+    "targetPrice": null,
+    "purchasePrice": 1986.0,
+    "marketPrice": 1047.4,
+    "owned": true,
+    "grade": "PSA 10.0 GEM - MT",
+    "quantity": 1,
+    "collectrCardNumber": "242/204",
+    "collectrMarketPrice": 1047.4
   }
 ];
 
