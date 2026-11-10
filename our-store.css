@@ -261,7 +261,8 @@
 .store-page .store-online > .btn { flex-shrink: 0; }
 .store-page .store-vault-links {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 650px;
   gap: 24px;
   margin-top: 32px;
 }

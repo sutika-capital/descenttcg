@@ -1,12 +1,12 @@
 // ============================================================
 // BUILD-TIME PRERENDER
-// Each vault page renders its inventory client-side, which means
+// The Lorcana Vault page renders its inventory client-side, which means
 // search engines and AI crawlers see an empty container. This
 // script runs each vault page through jsdom — executing the
 // page's own data + renderer scripts exactly as a browser would —
 // then serializes the fully-rendered DOM back to static HTML.
 //
-// Output: dist/ contains the 2 active prerendered vault pages plus
+// Output: dist/ contains the active prerendered Lorcana Vault plus
 // verbatim copies of every other site file. The api/ directory
 // is intentionally NOT copied — Vercel builds those serverless
 // functions from the project root independently of the static
@@ -30,6 +30,7 @@ const SITE_ORIGIN = 'https://descenttcg.com';
 // serverless functions, not static files. scripts/ and the package
 // files are build tooling, not site content.
 const EXCLUDE_FROM_COPY = new Set([
+  'sealed-vault', // TCG Vault product artwork folder, retained in source only
   '.git',
   '.vercel',
   'node_modules',
@@ -49,14 +50,30 @@ const EXCLUDE_FROM_COPY = new Set([
   // Temporarily hidden at the owner's request. Keep the original source
   // and assets intact; remove this exclusion when restoring the page.
   'fort-knox-vault.html',
-  // Archived graded-card data and presentation are retained in source but
-  // intentionally not shipped with the sealed-only public TCG Vault.
+  // TCG Vault is temporarily hidden at the owner's request. Keep its
+  // source page, renderers, inventory and assets intact for restoration.
+  'sealed-vault.html',
+  'slab-vault.html', // Legacy redirect stub remains saved in source only
+  'sealed-vault.js',
+  'sealed-vault.css',
+  'boss-pikachu.js',
+  'boss-pikachu.css',
+  'boosters.js',
+  'jp-specials.js',
+  'magic-tmnt.js',
+  // Earlier archived graded-card sources are also retained.
   'marketing.js',
   'slab-vault.js',
   'slab-vault.css',
 ]);
 
-const VAULT_PAGES = ['lorcana-vault.html', 'sealed-vault.html'];
+const EXCLUDE_PATHS_FROM_COPY = new Set([
+  ...['rocket','aqua','magma','galactic','plasma','flare','skull'].map(
+    team => `assets/photos/marketing/team-boss-pikachu-${team}-jp.webp`
+  ),
+]);
+
+const VAULT_PAGES = ['lorcana-vault.html'];
 
 // ------------------------------------------------------------
 // Static copy of everything that isn't build tooling.
@@ -71,6 +88,8 @@ function copySite() {
       if (entry.name.startsWith('.')) continue;
       if (EXCLUDE_FROM_COPY.has(entry.name)) continue;
       const src = path.join(srcDir, entry.name);
+      const relativePath = path.relative(ROOT, src).split(path.sep).join('/');
+      if (EXCLUDE_PATHS_FROM_COPY.has(relativePath)) continue;
       const dest = path.join(destDir, entry.name);
       if (entry.isDirectory()) {
         fs.mkdirSync(dest, { recursive: true });

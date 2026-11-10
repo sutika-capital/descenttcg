@@ -38,7 +38,7 @@
 
 - Plain HTML, CSS, and browser JavaScript live at the repository root.
 - `npm run build` runs `scripts/prerender.js`.
-- The build copies the active static site into `dist/`, prerenders the Lorcana and TCG vault pages, and injects product/item-list JSON-LD where appropriate. Fort Knox Vault is temporarily excluded from the public build while its original source is retained.
+- The build copies the active static site into `dist/`, prerenders the active Lorcana Vault page and injects product/item-list JSON-LD where appropriate. The TCG Vault and Fort Knox Vault are temporarily excluded from the public build while their original sources are retained.
 - The build deliberately fails when a data issue produces zero inventory items on a prerendered vault page. Treat that failure as a data or renderer problem, not something to bypass.
 - Vercel is configured to run `npm run build` and publish `dist/`. Vercel separately deploys the `api/` directory as serverless functions.
 
@@ -61,8 +61,8 @@ The contact inbox currently remains on the Ripping Zacks Microsoft 365 domain. C
 | Vault | Source files | Editing guidance |
 |---|---|---|
 | Lorcana Vault | `lorcana.js` | Update only after inventory owner approval. `null` prices are intentionally hidden. |
-| TCG Vault | `boss-pikachu.js`, `boosters.js`, `sealed-vault.js` | Update only after inventory owner approval. The public route remains `/sealed-vault`; `/slab-vault` permanently redirects there. The Team Boss Pikachu (JP) collection is public; other archived graded-card source files are intentionally excluded from the public build. |
-| Fort Knox Vault (temporarily hidden since 2026-11-09) | `fort-knox-vault.html` | Original page and assets are retained intact. The page is excluded from `dist/`, and its old URLs temporarily redirect to `/sealed-vault`. `fortknox.js` is unused legacy material; do not treat it as live inventory. |
+| TCG Vault (temporarily hidden since 2026-11-10) | `sealed-vault.html`, `boss-pikachu.js`, `boosters.js`, `sealed-vault.js`, supporting styles and assets | Original page, inventory, renderers and images are retained intact in source, but excluded from `dist/`. `/sealed-vault` and legacy TCG vault URLs temporarily redirect to `/our-store`. Restore through a reviewed PR by removing the build exclusions and temporary redirects, re-adding the route to `VAULT_PAGES`, then restoring navigation, Our Store promotion, sitemap and discovery listing. Do not delete the retained files or assets while hidden. |
+| Fort Knox Vault (temporarily hidden since 2026-11-09) | `fort-knox-vault.html` | Original page and assets are retained intact. The page is excluded from `dist/`, and its old URLs temporarily redirect to `/our-store` while the TCG Vault is hidden. `fortknox.js` is unused legacy material; do not treat it as live inventory. |
 
 When adding card photos, commit optimized files under `assets/photos/`; do not introduce base64-encoded images into the data files.
 
